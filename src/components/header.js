@@ -1,42 +1,25 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from 'react';
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
+import * as S from '../styles/sales_page';
+import CTAButton from './CTAButton';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import logo1 from '../images/logoteste.png';
+import logo2 from '../images/logo02.png';
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const Header = (props,ref) => {
+
+    return (
+        <S.Header ref={ref}>
+            <S.HeaderLogo size={props.size}>
+                <StaticImage 
+                    // fullWidth
+                    src="../images/logo02.png" />
+            </S.HeaderLogo>
+            <S.HeaderButton>
+                <CTAButton size={props.size || "header"}>Quero Meu Acesso</CTAButton>
+            </S.HeaderButton>
+        </S.Header>
+    );
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default React.forwardRef(Header);

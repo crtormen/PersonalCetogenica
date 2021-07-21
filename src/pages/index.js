@@ -1,29 +1,112 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React, {useEffect, useRef, useState} from 'react';
+import { useInView } from 'react-intersection-observer';
+import GlobalStyles from '../styles/global';
+import { StaticImage } from 'gatsby-plugin-image';
+import About from '../components/About';
+import Cover from '../components/Cover';
+import AntesEDepois from '../components/AntesEDepois';
+import Testimonials from '../components/Testimonials';
+import Header from '../components/Header';
+import IPresentYou from '../components/IPresentYou';
+import Beneficios from '../components/Beneficios';
+import OMetodo from '../components/OMetodo';
+import Mission from '../components/Mission';
+import Warranty from '../components/Warranty';
+import Price from '../components/Price';
+import AvisoLegal from '../components/AvisoLegal';
+import {FaWhatsapp} from 'react-icons/fa';
+import * as S from '../styles/sales_page';
+import * as C from '../styles/elements';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const SalesPage = () => {
+    const [ref, inView, entry] = useInView({rootMargin: '-100px 0px 0px 0px'});
+    const header = useRef(null);
+    const [headerSize, setHeaderSize] = useState("");
+  
+    useEffect(() => {
+      const setMenuColor = () => {
+        if (!entry) return;
+        if (!entry.isIntersecting) {
+            header.current.classList.add("nav-scrolled");
+            setHeaderSize('small');
+        } else {
+          header.current.classList.remove("nav-scrolled");
+          setHeaderSize('');
+        }
+      }
+      setMenuColor()
+    },[entry])
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+    return (
+        <S.Layout>
+            <Header ref={header} size={headerSize}/>
+                {/* <div style={{visibility:'hidden', marginLeft: 'auto'}} /> */}
+                
+            <S.PageWrapper>
+                <GlobalStyles />
+                <S.Cover ref={ref}>
+                    <Cover/>
+                </S.Cover>
+                <S.SocialProof1>
+                    <C.Title><C.Color color="var(--purple)">Veja O Que Dizem Minhas Alunas</C.Color> <C.Divider /></C.Title>
+                    <Testimonials>
+                        <StaticImage
+                            src="../images/testimonials/testemunho11.jpg" 
+                            alt="Testemunho"
+                        />
+                        <StaticImage
+                            src="../images/testimonials/testemunho14.jpg"
+                            alt="Testemunho"
+                        />
+                        <StaticImage
+                            src="../images/testimonials/testemunho12.jpg"
+                            alt="Testemunho"
+                            />
+                    </Testimonials>
+                </S.SocialProof1>
+                <S.Hero>
+                    <C.Title><C.BG>Há Alguns Anos, Descobri os Segredos Do Emagrecimento Saudável e Prazeroso</C.BG></C.Title>
+                    <C.Paragraph><C.Bolder><C.Color>...que transformaram a forma como eu via a Nutrição.</C.Color></C.Bolder></C.Paragraph>
+                </S.Hero>
+                <Beneficios />
+                <IPresentYou />
+                <About />
+                <AntesEDepois />
+                <OMetodo />
+                <S.SocialProof2>
+                    <C.Title><C.Color color="var(--purple)">Mais Alguns Depoimentos De Minhas Alunas</C.Color> <C.Divider /></C.Title>
+                    <Testimonials>
+                        <StaticImage
+                            src="../images/testimonials/testemunho25.jpg"
+                            alt="Testemunho 13"
+                        />
+                        <StaticImage
+                            src="../images/testimonials/testemunho8.jpg"
+                            alt="Testemunho 12"
+                        />
+                        <StaticImage
+                            src="../images/testimonials/testemunho21.jpg"
+                            alt="Testemunho 9"
+                        />
+                    </Testimonials>
+                </S.SocialProof2>
+                <Mission />
+                <Price />
+                <Warranty />
+                {/* <Threeway /> */}
+                {/* <Faq /> */}
+                <AvisoLegal />
+                <S.Contact>
+                    {/* <span>Alguma dúvida?</span>                     */}
+                    <S.Whatsapp href="https://api.whatsapp.com/send?phone=telefone&amp;text=Oi%2C%20Quero%20saber%20mais%20sobre%20o%Metodo%20Esbelta!" class="float" target="_blank">
+                        <FaWhatsapp className="icon" />
+                    </S.Whatsapp>
+                </S.Contact>
+            
 
-export default IndexPage
+            </S.PageWrapper>
+        </S.Layout>);
+}
+
+
+export default SalesPage;
