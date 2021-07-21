@@ -10,6 +10,7 @@
     "@fontsource/open-sans-condensed": "^4.5.0",
     "@fontsource/roboto": "^4.5.0",
     "@fontsource/roboto-condensed": "^4.5.0",
+    "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.6.2",
     "gatsby-background-image": "^1.5.3",
     "gatsby-plugin-anchor-links": "^1.2.1",

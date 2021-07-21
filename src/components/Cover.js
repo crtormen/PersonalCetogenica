@@ -9,7 +9,7 @@ const Cover = () => (
     <S.CoverWrapper>
         <StaticImage
             loading="eager"
-            fullWidth
+            layout="fullWidth"
             src="../images/bg-grad-colorful.jpg"
             alt="capa"
             className="coverImage"

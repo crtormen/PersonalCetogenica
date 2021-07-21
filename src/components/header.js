@@ -12,7 +12,7 @@ const Header = (props,ref) => {
         <S.Header ref={ref}>
             <S.HeaderLogo size={props.size}>
                 <StaticImage 
-                    // fullWidth
+                    loading="eager"
                     src="../images/logo02.png" />
             </S.HeaderLogo>
             <S.HeaderButton>
