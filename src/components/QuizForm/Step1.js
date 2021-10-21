@@ -1,43 +1,40 @@
 import React, { useState } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import * as S from './styled';
+import * as C from '../../styles/elements';
 
-const Step1 = ({step, gender}) => {
-    const [visible, setVisible] = useState(() => step === 1)
-    const [selectedGender, setGender] = useState(null);
-    return (
+const Step1 = ({visible, gender, setGender}) => (
         visible && 
-        <S.Step1Wrapper>
-            <S.MaleButtonWrapper for="gender-male">
-                <S.MaleIcon>Homem</S.MaleIcon>
-                <input 
-                    type="radio" 
-                    name="gender" 
-                    id="gender-male" 
-                    value="M" 
-                    onClick={() => setGender('M')} />
-            </S.MaleButtonWrapper>
-            <span>OU</span>
-            <S.FemaleButtonWrapper for="gender-female">
-                <S.FemaleIcon>Mulher</S.FemaleIcon>
-                <input 
-                    type="radio" 
-                    name="gender" 
-                    id="gender-female" 
-                    value="F" 
-                    onClick={() => setGender('F')} />
-                {/* <S.FemaleButton onClick={() => setGender('F')}>Mulher</S.FemaleButton> */}
-                {/* <S.IconText>Mulher</S.IconText> */}
-            </S.FemaleButtonWrapper>
-        </S.Step1Wrapper>
+        <>
+            <S.Header>
+                <C.SubTitle style={{textTransform: 'uppercase'}}>Descubra Suas Necessidades Nutricionais</C.SubTitle>
+            </S.Header>
+            <S.StepWrapper>
+                <S.MaleButtonWrapper htmlFor="gender-male" className={gender === 'M' && "checked"}>
+                    <StaticImage src="../../images/icons/male.png" alt="male"  className="image"/>
+                    <div className="text">Homem</div>
+                    <input 
+                        type="radio" 
+                        name="gender" 
+                        id="gender-male" 
+                        checked={gender === 'M'}
+                        value="M" 
+                        onChange={() => setGender('M')} />
+                </S.MaleButtonWrapper>
+                <span>OU</span>
+                <S.FemaleButtonWrapper htmlFor="gender-female" className={gender === 'F' && "checked"}>
+                    <StaticImage src="../../images/icons/female.png" alt="female"  className="image"/>
+                    <div className="text">Mulher</div>
+                    <input 
+                        type="radio" 
+                        name="gender" 
+                        checked={gender === 'F'}
+                        id="gender-female" 
+                        value="F" 
+                        onChange={() => setGender('F')} />
+                </S.FemaleButtonWrapper>
+            </S.StepWrapper>
+        </>
     )
-}
 
 export default Step1;
-
-// #gender-male-label {
-//     background: url(/img/male.png) no-repeat;
-//     width: 269px;
-//     height: 268px;
-//     content: ' ';
-//     background-color: transparent !important;
-// }

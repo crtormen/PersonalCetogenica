@@ -80,6 +80,7 @@ const Accordion = ({data}) => {
 
   const content = useRef([]);
   const toggle = index => {
+    console.log(index);
     let newHeightArray = [...setHeight];
     if (clicked === index) {
       //if clicked tab is already active, then close it

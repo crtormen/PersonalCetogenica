@@ -68,50 +68,50 @@ const OMetodo = () => (
                     <C.Bolder>Elaborado para que você consiga alcançar o seu corpo ideal de forma mais eficiente possível, 
                         de uma vez por todas, e sem passar fome</C.Bolder>
                 </C.Paragraph>
-            </S.MetodoIntro>
-            <S.MetodoMiddle>
-                <C.SubTitle  style={{color: 'white'}}>Minha ESTRATÉGIA para alcançar nossas metas <br />faz uso de 4 técnicas 
-                    poderosíssimas e revolucionárias, <br/>comprovadas pela ciência nos últimos anos:</C.SubTitle>
+        </S.MetodoIntro>
+        <S.MetodoMiddle>
+            <C.SubTitle  style={{color: 'white'}}>Minha ESTRATÉGIA para alcançar nossas metas <br />faz uso de 4 técnicas 
+                poderosíssimas e revolucionárias, <br/>comprovadas pela ciência nos últimos anos:</C.SubTitle>
 
-                <S.Grid columns={4}>
-                    <S.Pilares>
-                        <StaticImage src='../images/cetogenica.jpg' alt="cetogenica" className="image"/>
-                        <span className="tecnicas">Dieta Cetogênica</span>
-                    </S.Pilares>
-                    <S.Pilares>
-                        <StaticImage src='../images/jejum.jpg' alt="Jejum intermitente" className="image"/>
-                        <span className="tecnicas">Jejum Intermitente</span>
-                    </S.Pilares>
-                    <S.Pilares>
-                        <StaticImage src='../images/detox.jpg' alt="Detox"  className="image"/>
-                        <span className="tecnicas">Detox de Verdade</span>
-                    </S.Pilares>
-                    <S.Pilares>
-                        <StaticImage src='../images/ciclocarbo.jpg' alt="cetogenica" className="image"/>
-                        <span className="tecnicas">Ciclo de Carboidratos</span>
-                    </S.Pilares>                    
-                </S.Grid>
-                <C.Paragraph><C.Bigger>
-                    Essas técnicas, quando combinadas da maneira correta, transformarão seu corpo em uma <C.BG color="var(--purple)">máquina de 
-                    queimar gordura</C.BG>, literalmente. </C.Bigger>
-                </C.Paragraph>
-                <C.List color="white" icon="purplearrow">
-                    <ul>
-                        <li style={{ fontWeight: '500'}}>
-                            Seu corpo se tornará mais eficiente em suas funções básicas, através de alterações metabólicas 
-                            e hormonais, obtendob assim <C.Underline>resultados duradouros</C.Underline>.                            
-                        </li>
-                        <li style={{fontWeight: '500'}}>
-                            Você irá obter inúmeros benefícios à sua saúde, como maior clareza mental, memória e concentração. 
-                            Além de uma maior prevenção e controle de doenças crônicas como o diabetes e a hipertensão.
+            <S.Grid columns={4}>
+                <S.Pilares>
+                    <StaticImage src='../images/cetogenica.jpg' alt="cetogenica" className="image"/>
+                    <span className="tecnicas">Dieta Cetogênica</span>
+                </S.Pilares>
+                <S.Pilares>
+                    <StaticImage src='../images/jejum.jpg' alt="Jejum intermitente" className="image"/>
+                    <span className="tecnicas">Jejum Intermitente</span>
+                </S.Pilares>
+                <S.Pilares>
+                    <StaticImage src='../images/detox.jpg' alt="Detox"  className="image"/>
+                    <span className="tecnicas">Detox de Verdade</span>
+                </S.Pilares>
+                <S.Pilares>
+                    <StaticImage src='../images/ciclocarbo.jpg' alt="cetogenica" className="image"/>
+                    <span className="tecnicas">Ciclo de Carboidratos</span>
+                </S.Pilares>                    
+            </S.Grid>
+            <C.Paragraph><C.Bigger>
+                Essas técnicas, quando combinadas da maneira correta, transformarão seu corpo em uma <C.BG color="var(--purple)">máquina de 
+                queimar gordura</C.BG>, literalmente. </C.Bigger>
+            </C.Paragraph>
+            <C.List color="white" icon="purplearrow">
+                <ul>
+                    <li style={{ fontWeight: '500'}}>
+                        Seu corpo se tornará mais eficiente em suas funções básicas, através de alterações metabólicas 
+                        e hormonais, obtendob assim <C.Underline>resultados duradouros</C.Underline>.                            
+                    </li>
+                    <li style={{fontWeight: '500'}}>
+                        Você irá obter inúmeros benefícios à sua saúde, como maior clareza mental, memória e concentração. 
+                        Além de uma maior prevenção e controle de doenças crônicas como o diabetes e a hipertensão.
 
-                        </li>
-                        <li style={{fontWeight: '500'}}>
-                            Aliado à essas técnicas, haverá uma grande variedade de receitas já incluídas nos planos alimentares.
-                        </li>
-                    </ul>
-                </C.List>
-            </S.MetodoMiddle>
+                    </li>
+                    <li style={{fontWeight: '500'}}>
+                        Aliado à essas técnicas, haverá uma grande variedade de receitas já incluídas nos planos alimentares.
+                    </li>
+                </ul>
+            </C.List>
+        </S.MetodoMiddle>
         <S.MetodoModulos>
             <C.Title>Como funcionará o Método Esbelta de Emagrecimento? <C.Divider /></C.Title>
 

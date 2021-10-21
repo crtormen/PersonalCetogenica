@@ -3,8 +3,6 @@ import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import * as S from '../styles/sales_page';
 import CTAButton from './CTAButton';
 
-import logo1 from '../images/logoteste.png';
-import logo2 from '../images/logo02.png';
 
 const Header = (props,ref) => {
 
@@ -13,7 +11,8 @@ const Header = (props,ref) => {
             <S.HeaderLogo size={props.size}>
                 <StaticImage 
                     loading="eager"
-                    src="../images/logo02.png" />
+                    src="../images/logo-esbelta-desafio-branco.png"
+                    alt="logo" />
             </S.HeaderLogo>
             <S.HeaderButton>
                 <CTAButton size={props.size || "header"}>Quero Meu Acesso</CTAButton>

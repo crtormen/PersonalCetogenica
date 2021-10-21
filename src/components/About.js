@@ -27,19 +27,22 @@ const About = () => (
             </div>
         </S.AboutText>
         <S.AboutFull>
-            <C.SubTitle>Me dê 1 minuto para te explicar como desenvolvi o <C.Underline>Método Esbelta</C.Underline>...</C.SubTitle>
+            <C.Paragraph style={{textAlign: "center"}}>Porém, isso nem sempre foi assim...</C.Paragraph>
+            <C.SubTitle>Me dê 1 minuto para te explicar como desenvolvi o <C.Underline>Método Esbelta</C.Underline>.</C.SubTitle>
         </S.AboutFull>
         <S.AboutText>
             <C.Paragraph>
-                Sempre cuidei da minha alimentação. Porém, <C.Underline>em 2013 tive um choque de realidade.</C.Underline>
+                Era 2014, e lá estava eu, subindo no palco para mais uma competição de fisiculturismo. 
             </C.Paragraph>
             <C.Paragraph>                
-                Foi quando iniciei no fisiculturismo, orientada por um famoso coach desse meio, e me deparei com o extremo da restrição alimentar, em busca de um corpo
-                com o máximo de definição muscular. 
+                Foi quando senti minha pressão cair, minhas pernas amolecerem, e só tive tempo de falar para meu marido me segurar antes de desmaiar. 
+                Eu era campeã gaúcha e sul-brasileira da categoria Woman's Physique, a categoria que exige o grau mais extremo de definição muscular.
+                E dessa vez eu iria subir no palco do campeonato brasileiro. 
             </C.Paragraph>
-            <C.Paragraph>Nos 3 meses que antecediam uma competição, comia menos que passarinho. <C.BG>Sentia muita fome</C.BG>.</C.Paragraph>
-            <C.Paragraph>Quando passava a competição, todo aquele desejo reprimido de comer o que não era permitido, vinha à tona. Mesmo sendo nutricionista, e mesmo com
-                toda minha disciplina, eu acabava chutando o balde valendo. 
+            <C.Paragraph>Nos 3 meses que antecediam uma competição, eu comia menos que passarinho e fazia 3 horas de aeróbios, mais musculação, todos os dias. <C.BG>Sentia muita fome e estava sempre cansada</C.BG>.</C.Paragraph>
+            <C.Paragraph>Naquele dia, acabei não conseguindo competir, e não pude realizar meu sonho de disputar o brasileiro. Mas o pior ainda estava por vir...</C.Paragraph>
+            <C.Paragraph>Durante os períodos de restrição, eu abria mão de muitas coisas: festas, almoços, etc. Mas quando passava as competições, todo aquele desejo reprimido de comer o que não eu não podia, vinha à tona. Mesmo sendo nutricionista, e mesmo com
+                toda minha disciplina, eu acabava chutando o balde valendo. E recuperava em pouco tempo todo o peso perdido.
             </C.Paragraph>            
         </S.AboutText>
         <S.AboutImage style={{width: '85%'}}>
@@ -57,7 +60,7 @@ const About = () => (
             <C.Quote><p>A razão nº 1 que faz você não emagrecer é <C.Underline>não ter prazer em fazer dieta.</C.Underline></p></C.Quote>
         </S.AboutQuote>
         <S.AboutText>
-            <C.Paragraph> Então, passei a buscar soluções para atingir aquele corpo sem tanto sofrimento.</C.Paragraph>
+            <C.Paragraph> Então, passei a buscar soluções para perder gordura sem tanto sofrimento.</C.Paragraph>
             <C.Paragraph>
                 Estudei muito e li estudos de alguns dos melhores autores do mundo todo. Passei a testar em mim os novos conhecimentos que ia adquirindo, refinando o que funcionava,
                 aprimorando minhas técnicas. Até que em 2017, finalmente encontrei a <C.Bolder><C.Underline>FÓRMULA PERFEITA</C.Underline></C.Bolder>.
@@ -78,9 +81,9 @@ const About = () => (
             <C.Paragraph>A dieta, agradável de seguir, teve grande aceitação. Pacientes que já estavam há anos comigo, e que já haviam conquistado ótimos resultados, melhoraram ainda mais.</C.Paragraph>
             <C.Paragraph>E TODOS, sem exceção, emagreceram mais do que o planejado. <C.Underline>E se mantiveram magros</C.Underline>.</C.Paragraph>
         </S.AboutText>
-        <S.AboutText style={{marginTop: '-9rem'}}>
+        <S.AboutText style={{marginTop: '-1rem'}}>
             <C.Paragraph>E desde então venho aprimorando essa metodologia.</C.Paragraph>
-            <C.Paragraph>E agora, resolvi estruturar tudo isso em um método online de emagrecimento,
+            <C.Paragraph>Agora, resolvi estruturar tudo isso em um método online de emagrecimento,
                 voltado exclusivamente para mulheres, em que trataremos de problemas específicos que nós, mulheres, enfrentamos,
                 como:
             </C.Paragraph>

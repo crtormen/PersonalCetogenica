@@ -7,13 +7,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 const Price = () => (
 	<S.Price>
+	<S.Atencao>Atenção: <br /><span>Promoção Por Tempo Limitado</span></S.Atencao>
 	<C.Title>Estou oferecendo uma janela de oportunidade <br />única nesse lançamento<C.Divider /></C.Title>
 
 	<C.Paragraph><C.Bolder>O programa completo do Método Esbelta será vendido por <C.Color color="red">R$ 994</C.Color> dentro de algumas semanas.</C.Bolder></C.Paragraph>
 	
-	<C.Paragraph>Afinal, esse é o único método de emagrecimento eficaz e saudável, capaz de transformar algo chato em algo extremamente prazeroso e sem sofrimento, com benefícios que você colherá para o resto da vida.</C.Paragraph>
+	<C.Paragraph>Esse é o único método de emagrecimento, capaz de transformar algo chato em algo extremamente prazeroso e sem sofrimento, de forma eficaz e saudável, com benefícios que você colherá para o resto da vida.</C.Paragraph>
 	
-	<C.Paragraph>Mas, como meu desejo é premiar aquelas mulheres que estão determinadas, com convicção de onde querem chegar e acreditam no meu trabalho, começarei com um valor muito menor do que R$ 994.</C.Paragraph>
+	<C.Paragraph>Mas, como meu desejo é premiar aquelas mulheres que estão determinadas, com convicção de onde querem chegar e acreditam no meu trabalho, disponibilizarei o Método Esbelta com um valor muito menor do que R$ 994.</C.Paragraph>
 	
 	<C.Paragraph>E não estou nem falando de um investimento em torno de 50% desse valor, que seria R$ 497.</C.Paragraph>
 
@@ -21,9 +22,9 @@ const Price = () => (
 			<S.CTATitle>Comprando hoje você receberá: </S.CTATitle>
 			<S.CTAList icon="greencheck">
 				<ul>
-					<li>O Sistema Completo do Método Esbelta <C.ValorFake>(R$994)</C.ValorFake> +</li>
-					<li>16 Livros de Receitas Calculadas <C.ValorFake>(R$397)</C.ValorFake> +</li>
-					<li>5 Treinos do Programa Detox40 <C.ValorFake>(R$49)</C.ValorFake> +</li>
+					<li>O Sistema Completo do Método Esbelta <C.ValorFake>(R$994)</C.ValorFake></li>
+					<li>16 Livros de Receitas Calculadas <C.ValorFake>(R$397)</C.ValorFake></li>
+					<li>5 Treinos do Programa Detox40 <C.ValorFake>(R$49)</C.ValorFake></li>
 					<li>8 Aulas de LPF - Low Press Fitness <C.ValorFake>(R$760)</C.ValorFake></li>
 				</ul>
 			</S.CTAList>
@@ -40,7 +41,7 @@ const Price = () => (
 
 	<C.Paragraph>Sim, eu sei que esse valor está praticamente de graça frente a todo o conhecimento e a transformação que o curso oferece. Mas...</C.Paragraph>
 	<C.Paragraph><C.Bolder>É minha forma de premiar você que está <C.BG>decidida a virar esse jogo agora.</C.BG></C.Bolder></C.Paragraph>
-	<C.Paragraph>Então, clique no botão acima e preencha os campos na página seguinte, para ganhar acesso imediato à nova fase da sua vida.</C.Paragraph>
+	<C.Paragraph>Então, clique no botão acima e preencha os campos na página seguinte, para ganhar acesso imediato a essa nova fase da sua vida.</C.Paragraph>
 	
 		
 	</S.Price>

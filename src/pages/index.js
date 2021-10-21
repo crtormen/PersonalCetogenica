@@ -54,21 +54,30 @@ const SalesPage = () => {
                             src="../images/testimonials/testemunho11.jpg" 
                             alt="Testemunho"
                         />
+                        <C.Divider className="hide"/>
                         <StaticImage
                             src="../images/testimonials/testemunho14.jpg"
                             alt="Testemunho"
                         />
+                        <C.Divider className="hide"/>
                         <StaticImage
                             src="../images/testimonials/testemunho12.jpg"
                             alt="Testemunho"
                             />
                     </Testimonials>
                 </S.SocialProof1>
-                <S.Hero>
-                    <C.Title><C.BG>Há Alguns Anos, Descobri os Segredos Do Emagrecimento Saudável e Prazeroso</C.BG></C.Title>
-                    <C.Paragraph><C.Bolder><C.Color>...que transformaram a forma como eu via a Nutrição.</C.Color></C.Bolder></C.Paragraph>
-                </S.Hero>
                 <Beneficios />
+                <S.Hero>
+                    <div style={{maxWidth:"100ch"}}><C.Title><C.BG>Há Alguns Anos, Descobri os Segredos Do Emagrecimento Saudável e Prazeroso</C.BG></C.Title></div>
+                    <C.Paragraph><C.Bolder><C.Color>...que transformaram a forma como eu via a Nutrição.</C.Color></C.Bolder></C.Paragraph>
+                    {/* <C.Paragraph>
+                        <C.Color color="var(--postColor)"><C.BG>IMPORTANTE:</C.BG></C.Color> 
+                        <C.Color> Se alcançar um resultado impressionante desses, de forma tão rápida, assusta você, 
+                    pare de ler agora mesmo. <br/>O método que irei te apresentar não é para você.</C.Color>
+                </C.Paragraph>
+                <C.Paragraph><C.Color>Mas se é isso mesmo que você está procurando, e se está DETERMINADA a emagrecer de uma vez por todas, </C.Color></C.Paragraph> */}
+                <C.Paragraph><C.Color>Eu lhe apresento...</C.Color></C.Paragraph>
+                </S.Hero>
                 <IPresentYou />
                 <About />
                 <AntesEDepois />
@@ -80,10 +89,12 @@ const SalesPage = () => {
                             src="../images/testimonials/testemunho25.jpg"
                             alt="Testemunho 13"
                         />
+                        <C.Divider className="hide"/>
                         <StaticImage
                             src="../images/testimonials/testemunho8.jpg"
                             alt="Testemunho 12"
                         />
+                        <C.Divider className="hide"/>
                         <StaticImage
                             src="../images/testimonials/testemunho21.jpg"
                             alt="Testemunho 9"
@@ -98,7 +109,7 @@ const SalesPage = () => {
                 <AvisoLegal />
                 <S.Contact>
                     {/* <span>Alguma dúvida?</span>                     */}
-                    <S.Whatsapp href="https://api.whatsapp.com/send?phone=telefone&amp;text=Oi%2C%20Quero%20saber%20mais%20sobre%20o%Metodo%20Esbelta!" class="float" target="_blank">
+                    <S.Whatsapp href="https://api.whatsapp.com/send?phone=telefone&amp;text=Oi%2C%20Quero%20saber%20mais%20sobre%20o%Metodo%20Esbelta!" className="float" target="_blank">
                         <FaWhatsapp className="icon" />
                     </S.Whatsapp>
                 </S.Contact>

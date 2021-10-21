@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+import ProximaNovaBlack from './proxima-nova-black.otf';
+import ProximaNovaBold from './proxima-nova-bold.otf';
 // import media from 'styled-media-query';
 
 
@@ -112,7 +114,7 @@ body {
   --purpleRGB: 91, 34, 102;
   --orangeRGB: 255, 97, 60;
   --highlight: #FF613C;
-  --menuBackground: rgba(var(--purpleRGB),0.1);
+  --menuBackground: rgba(var(--purpleRGB),0.2);
   --menuText: var(--postColor);
 }
 
@@ -128,7 +130,21 @@ section {
         transition: padding 250ms ease-in-out;
     }
 
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url(${ProximaNovaBlack}) format('opentype');
+    font-style: normal;
+    font-weight: black;
+    font-display: auto;
+  }
 
+  @font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(${ProximaNovaBold}) format('opentype');
+    font-style: normal;
+    font-weight: bold;
+    font-display: auto;
+  }
 `
 
 export default GlobalStyles;

@@ -37,7 +37,12 @@ const Button = styled.a`
 
     ${media.lessThan('medium')`
         font-size: 12px;
-        padding: 1rem;
+        padding: 20px 1rem;
+        margin: 1rem 0;
+    `}
+
+    ${media.lessThan("400px")`
+        padding: 10px;
     `}
 `
 
@@ -51,6 +56,10 @@ const CTAButtonWrapper = styled.div`
         height: 10rem;
         width: 100%;
     }
+
+    ${media.lessThan('medium')`
+        margin: 0;
+    `}
 
 `
 

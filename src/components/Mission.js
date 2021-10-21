@@ -21,7 +21,7 @@ const Mission = () => (
                 </ul>
             </C.List>
             <div className="right">
-                <StaticImage src='../images/removing-fat.jpg' alt="removendo gordura" height='100%'/>
+                <StaticImage src='../images/removing-fat.jpg' alt="removendo gordura"/>
             </div>
         </S.TextAndImage>
 

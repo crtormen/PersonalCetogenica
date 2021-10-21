@@ -26,7 +26,7 @@ export const Paragraph = styled.p`
     color: var(--texts);
 
     ${media.lessThan("medium")`
-        padding: 0 1rem;
+        padding: 0 1rem 1rem;
         font-size: 1.1rem;
     `}
     
@@ -69,9 +69,15 @@ export const Block = styled.div`
     box-shadow: 5px 10px 1rem rgba(1,1,1, 0.1) ${props => props.inset && 'inset'};
     background: white;
     padding: 2rem 4rem;
-    margin: 3rem;
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    ${media.lessThan("medium")`
+        padding: 1rem;
+        margin: 1rem 0;
+    `}
 `
 
 
@@ -104,7 +110,7 @@ export const ValorFake = styled.span`
 `
 
 export const List = styled.div`
-ul {
+    ul {
         margin: 2rem;
     }
 
@@ -117,6 +123,7 @@ ul {
         `font-size: 1.3rem;
         line-height: 2.2;
         font-weight: 700;` }
+        margin-bottom: 1rem;
     }
 
     li:before{
@@ -138,6 +145,24 @@ ul {
         width: 1.2rem;`}
         
     }
+
+    ${media.lessThan("medium")`
+        ul{
+            margin: 1rem;
+        }
+
+        ul li {
+            ${props => props.size === 'small' ? `font-size: 14px;` : `font-size: 1rem;`};
+            margin-bottom: 12px;
+        }
+        li::before {
+            ${props => props.size === 'small' ? 
+                `height: 12px;
+                width: 12px;`:
+                `height: 1rem;
+                width: 1rem;`}
+        }
+    `}
 `
 
 export const Quote = styled.div`
@@ -180,7 +205,9 @@ export const Quote = styled.div`
     }
 
     ${media.lessThan("medium")`
-        margin: -1rem 2rem 2rem;
+        margin: 0 2rem 2rem;
+        padding: 0;
+        
         p {
             font-size: 1.5rem;
 
