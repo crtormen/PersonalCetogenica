@@ -4,7 +4,7 @@ import {SubTitle} from '../../styles/elements';
 
 const ResultsPage = ({visible, weight, target, activity, result}) => (
     visible &&
-    <S.ResultsWrapper>
+    <S.Wrapper>
         <S.Header>
             <SubTitle style={{textTransform: 'uppercase'}}>Resultados</SubTitle>
         </S.Header>
@@ -43,7 +43,7 @@ const ResultsPage = ({visible, weight, target, activity, result}) => (
                 <S.BoxValue>{target} Kg</S.BoxValue>
             </S.Box>
         </S.ResultBoxes>    
-    </S.ResultsWrapper>
+    </S.Wrapper>
 );
 
 export default ResultsPage;

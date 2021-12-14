@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import gradientBorder from '../../images/icons/gradient-border.png';
 import sofa from '../../images/icons/sofa.png';
+
+
 export const FormWrapper = styled.section`
 
 `
@@ -64,17 +66,40 @@ export const FormInput = styled.div`
 
 export const PrevButton = styled.button``
 
+export const Wrapper = styled.div`
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) repeat(3,1fr) minmax(1em,1fr);
+    min-height: 80vh;
+    height: 100%;
+    padding: 0 0 4rem;
+
+`
+
 export const StepWrapper = styled.div`
+    grid-row: 2/5;
+    grid-column: 1/-1;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
     color: white;
     font-weight: 600;
     font-family: Roboto, sans-serif;
     height: 400px;
+
+    ${media.lessThan("medium")`
+        flex-direction: column;  
+        height: 200px;      
+    `}
+
+    span {
+        margin: 2rem;
+    }
 `
 export const Header = styled.section`
+    grid-row: 1/2;
+    grid-column: 2/-2;
     margin: 1rem auto;
     h2 { color: white; }
 `
@@ -136,23 +161,48 @@ export const ButtonWrapper = styled.label`
         margin-top: -7rem; 
         z-index: 10;
     }
+
+    ${media.lessThan("medium")`
+        max-width: 50%; 
+        opacity: 1;
+
+        div.text {
+            margin-top: -4.5rem;
+        }
+    `}
+    
 `
 
 export const MaleButtonWrapper = styled(ButtonWrapper)`
     width: 269px;
     height: 268px;
     content: ' ';
+    margin: 2rem;
 `
 
 export const FemaleButtonWrapper = styled(ButtonWrapper)`
     width: 269px;
     height: 267px;
     content: ' ';
+    margin: 2rem;
+`
+
+export const wraptest = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 `
 
 export const ActivityGridContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
+    display: flex;
+    flex-direction: row;
+
+    ${media.lessThan("medium")`
+        flex-direction: column;        
+    `}
+    /* display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr)); */
 `
 
 export const ActivityButtonWrapper = styled(ButtonWrapper)`
@@ -160,6 +210,23 @@ export const ActivityButtonWrapper = styled(ButtonWrapper)`
     margin: 1rem 2rem;
     display:flex;
     flex-direction: column;
+    border:  1px solid var(--orange) !important;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 14px rgb(0 0 0 / 40%);
+
+
+    /* .image {
+        width: '250px' !important;
+        height: '250px';
+    }
+
+    ${media.lessThan("medium")`
+        .image {
+            width: '125px';
+            height: '125px';
+        }
+    `} */
+
 `
 export const ActivityDescription = styled.div`
     text-align: center;
@@ -189,15 +256,19 @@ export const IconText = styled.span`
 
 `
 
-export const ResultsWrapper = styled.section``
-
 export const Navigation = styled.section``;
 
 export const ResultBoxes = styled.div`
+    grid-row: 2/5;
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 2rem;
     margin: 0 auto;
+
+    ${media.lessThan("medium")`
+        padding: 1rem 2rem;
+    `}
 
 `
 export const Box = styled.div`
@@ -205,12 +276,21 @@ export const Box = styled.div`
     background: var(--pink);
     border-radius: 8px;
     box-shadow: 2px 2px 14px rgb(0 0 0 / 40%);
+
+    ${media.lessThan("medium")`
+        padding:  1rem;
+        width: 100%;
+    `}
 `
 
 export const BoxHeader = styled.h2`
     color: white;
     text-align: left;
     font-size:  1.2rem;
+    
+    ${media.lessThan("medium")`
+        font-size:  1rem;
+    `}
 `
 
 export const BoxValue = styled.div`
@@ -218,4 +298,10 @@ export const BoxValue = styled.div`
     font-size: 2.2rem;
     text-align: center;
     padding: 2rem;
+    
+    ${media.lessThan("medium")`
+        font-size: 1.6rem;
+        padding: 1rem;
+        
+    `}
 `

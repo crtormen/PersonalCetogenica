@@ -15,9 +15,9 @@ const Warranty = () => (
                     devolveremos 100% do valor investido sem nenhuma pergunta.</C.Paragraph>
                     <C.Paragraph>Esse é seu direito por Lei, e está previsto no Código de Defesa ao Consumidor. </C.Paragraph>
 
-                    <C.Paragraph>Porém, eu confio tanto no meu método, que dobrarei esse prazo.
+                    {/* <C.Paragraph>Porém, eu confio tanto no meu método, que dobrarei esse prazo.
                     Isso mesmo! Você terá <C.Bolder>14 dias</C.Bolder> para desfrutar do seu acesso ao curso. 
-                    E, se nesses 14 dias, você ainda não estiver satisfeita, basta me enviar um email que devolvemos 100% do valor investido.</C.Paragraph>
+                    E, se nesses 14 dias, você ainda não estiver satisfeita, basta me enviar um email que devolvemos 100% do valor investido.</C.Paragraph> */}
 
                     <C.Paragraph>Fique tranquila. Não tem letras miúdas nessa página nem um contrato com termos dificeis.
                     E também não iremos te perguntar nada se você pedir seu dinheiro de volta.

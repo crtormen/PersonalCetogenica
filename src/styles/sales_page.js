@@ -63,7 +63,6 @@ export const Header = styled.header`
 
 export const HeaderLogo  = styled.div`
     grid-column: 2/4;
-    height: ${props => props.size === 'small' ? '5rem' : '7rem'};
     width: ${props => props.size === 'small' ? '12rem' : '17rem'};
 
     ${media.lessThan("large")`
@@ -72,8 +71,7 @@ export const HeaderLogo  = styled.div`
     `}
 
     ${media.lessThan("medium")`
-        width: 5rem;
-        height: 5rem;
+        width: 8rem;
     `}
 
     &:hover {
@@ -82,8 +80,7 @@ export const HeaderLogo  = styled.div`
     }
 
     ${media.lessThan("400px")`
-        width: 3.6rem;
-        height: 3.6rem;
+        width: 8rem;
     `}
 `
 
@@ -104,20 +101,24 @@ export const CoverWrapper = styled.div`
     position: absolute; 
     width: 100%;
     min-height: 100vh;
-
-    .coverImage {
+    
+    /* .coverImage {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-    }
+    } */
+
+    background: rgb(91,34,102);
+    background: linear-gradient(183deg, rgba(91,34,102,1) 0%, rgba(102,34,96,1) 35%, rgba(200,43,112,1) 100%);
 `
 
 export const Cover = styled.section`
     grid-row: 1/2;
     grid-column: 1/-1;
     min-height: 100vh;
+    height: 100%;
     /* background: url(${coverbg});
     background-position: 54.1463% 83.2117%;
     background-size: cover;
@@ -131,24 +132,32 @@ export const Cover = styled.section`
 export const CoverCopy = styled.div`
     /* display: grid;
     grid: auto / minmax(1em, 1fr) repeat(3, 1fr) minmax(1em, 1fr); */
-    display: flex;
-    flex-direction: row;
-    margin: 12rem 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 1rem 0 0;
 
     ${media.lessThan("large")`
-        flex-direction: column;
-        margin: 12rem 1rem 0;
+        /* flex-direction: column; */
         align-items: center;
     `}
 
-    ${media.lessThan("700px")`
-        margin: 8rem 2rem 0;
-    
-    `}
 
+`
+export const CoverLogo = styled.div`
+    grid-row: 1/2;
+    grid-column: 3/5;
+    height: auto;
+    width: 20rem;
+    margin: 0 auto 2rem;
+    
+    ${media.lessThan("medium")`
+        width: 10rem;
+    `}
 `
 
 export const HeadlineWrapper = styled.div`
+    grid-column: 1/4;
+    grid-row: 2/5;
     z-index: 100;
     position: relative;
     display: flex;
@@ -157,16 +166,17 @@ export const HeadlineWrapper = styled.div`
     margin: auto;
     padding: 0 2rem;
     color: white;
-    width: 50%;
 
     ${media.lessThan("large")`
         margin-bottom: 2rem;
-        width: 75%;
+        grid-column: 2/-2;
+        grid-row: 2/3;
     `}
-
-    ${media.lessThan('700px')`
-        margin: 0;
-        width: 100%;
+        
+        ${media.lessThan('700px')`
+        margin: 0 1rem;
+        grid-column: 1/-1;
+        grid-row: 2/3;
         padding: 0;
     `}
 `
@@ -261,17 +271,18 @@ export const YoutubeWrapper = styled.div`
 `
 
 export const VideoWrapper = styled.div`
-    /* grid-row: 2/3;
-    grid-column: 2/-2; */
-    /* margin-bottom: 2rem; */
-    width: 50%;
-
+    grid-column: 4/-1;
+    grid-row: 2/5;
+    margin: 2rem;
+    
     ${media.lessThan("large")`
-        width: 80%;
+        grid-column: 1/-1;
+        grid-row: 3/4;
     `}
-
+        
     ${media.lessThan("medium")`
-        width: 90%;
+        grid-column: 1/-1;
+        grid-row: 3/4;
         margin: 2rem 0;
     `}
 `
@@ -279,14 +290,22 @@ export const VideoWrapper = styled.div`
 
 
 export const CTAButtonWrapper = styled.div`
-    /* grid-row: 3/4;
-    grid-column: 2/-2;   */
-    /* justify-self: center;   */
+    grid-column: 1/-1; 
+    grid-row: 5/6;
+    z-index: 100;
+    margin: 0 auto;
+    
+    ${media.lessThan("large")`
+        grid-row: 4/5;
+    `}
 `
 
 export const SocialProof1 = styled.section`
     grid-row: 2/3;
-    grid-column: 2/-2;
+    grid-column: 1/-1;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
 
     ${media.lessThan("medium")`
         grid-column: 1/-1;
@@ -294,20 +313,96 @@ export const SocialProof1 = styled.section`
     `} 
 `
 
-export const Hero = styled.section`
+
+export const About = styled.section`
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(1em, 0.5fr) repeat(2, minmax(300px,1fr)) minmax(1em, 0.5fr);
+    grid-gap: 1rem;
+    margin: 0 auto;  
+    
+    ${media.lessThan("medium")`
+        grid-column: 1/-1;
+        grid-template-columns: 1fr;
+        margin: 1rem;
+    `}
+`
+
+export const MetodoEsbelta = styled.section`
     grid-row: 4/5;
     grid-column: 1/-1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: url(${bgNarrow});
-    padding: 2rem;
     text-align: center;
-    margin: 3rem 0 0 0;
+    align-items: center;
+    margin: 0 auto;
+    padding: 4rem;
+    background-color: var(--grey);
+
+    h1 {
+        max-width: 60rem;
+    }
+
+    ${media.lessThan("medium")`
+        padding: 1rem;
+    `}
 `
 
+export const AntesEDepois = styled.section`
+    position: relative;
+    grid-row: 5/6;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    height: 100%;
+
+    .bgImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+
+    ${media.lessThan("medium")`
+        padding: 2rem;
+    `}
+`
+
+export const Desafio28Dias = styled.section`
+    grid-row: 6/7;
+    grid-column: 1/-1;
+    background: var(--grey);
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
+    padding: 2rem 0;
+
+    ${media.lessThan("medium")`
+        grid-template-columns: 1rem repeat(5, 1fr) 1rem;
+    `}
+`
+
+export const Story = styled.section`
+    grid-row: 7/8;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(1em, 0.5fr) repeat(2, minmax(300px,1fr)) minmax(1em, 0.5fr);
+    grid-gap: 1rem;  
+    
+    ${media.lessThan("medium")`
+        grid-column: 1/-1;
+        grid-template-columns: 1fr;
+        margin: 1rem;
+    `}
+`
+
+
 export const Beneficios = styled.section`
-    grid-row: 3/4;
+    grid-row: 12/13;
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
@@ -342,8 +437,8 @@ export const BeneficiosRightSide = styled.div`
         grid-column: 1/-1;
         grid-row: 2/3; 
         align-items: center;       
-    `}
-`;
+        `}
+        `;
 
 
 export const BeneficiosFullPage = styled.div`
@@ -362,56 +457,6 @@ export const BeneficiosFullPage = styled.div`
     `}
 `
 
-export const IPresentYou = styled.section`
-    grid-row: 5/6;
-    grid-column: 1/-1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto 4rem;
-    padding: 2rem;
-    background-color: var(--grey);
-
-    h1 {
-        max-width: 60rem;
-    }
-`
-
-export const About = styled.section`
-    grid-row: 6/7;
-    grid-column: 2/-2;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px,1fr));
-    grid-gap: 1rem;  
-
-    ${media.lessThan("medium")`
-        grid-column: 1/-1;
-        grid-template-columns: 1fr;
-        margin: 1rem;
-    `}
-`
-
-export const AntesEDepois = styled.section`
-    grid-row: 7/8;
-    grid-column: 1/-1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem;
-    background: url(${coverbg});
-    background-position: 54.1463% 83.2117%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: white;
-    background-attachment: fixed;
-
-
-    ${media.lessThan("medium")`
-        padding: 2rem;
-    `}
-`
-
 export const Desafio = styled.section`
     grid-row: 8/9;
     grid-column: 2/-2;
@@ -421,21 +466,12 @@ export const Desafio = styled.section`
     margin: auto;
 `
 
-export const Metodo = styled.section`
-    grid-row: 9/10;
-    grid-column: 1/-1;
-    background: var(--grey);
-    display: grid;
-    grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
-    padding: 2rem 0;
-
-    ${media.lessThan("medium")`
-        grid-template-columns: 1rem repeat(5, 1fr) 1rem;
-    `}
-`
 export const SocialProof2 = styled.section`
-    grid-row: 10/11;
-    grid-column: 2/-2;
+    grid-row: 8/9;
+    grid-column: 1/-1;
+    display: grid;
+    background: var(--light-orange);
+    grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
 
     ${media.lessThan("medium")`
         grid-column: 1/-1;
@@ -444,7 +480,7 @@ export const SocialProof2 = styled.section`
 `
 
 export const Mission = styled.section`
-    grid-row: 11/12;
+    grid-row: 9/10;
     grid-column: 1/-1;
     padding: 2rem 4rem;
     margin-bottom: 3rem;
@@ -475,7 +511,7 @@ export const Mission = styled.section`
 `
 
 export const Price = styled.section`
-    grid-row: 12/13;
+    grid-row: 10/11;
     grid-column: 1/-1;
     display: flex;
     flex-direction: column;
@@ -486,7 +522,7 @@ export const Price = styled.section`
 `
 
 export const Warranty = styled.section`
-    grid-row: 13/14;
+    grid-row: 11/12;
     grid-column: 2/-2;
     margin: 3rem auto;
 
@@ -516,7 +552,7 @@ export const Warranty = styled.section`
 
 
 export const AvisoLegalWraper = styled.section`
-    grid-row: 14/15;
+    grid-row: 13/14;
     grid-column: 1/-1;
     text-align: center;
     padding: 2rem;
@@ -537,17 +573,21 @@ export const Aviso = styled.section`
 
 
 export const Testimonials = styled.div`
+    grid-column: 2/-2;
     display: grid;
     ${({ columns }) => columns ? 
         `grid-template-columns: repeat(${columns}, 1fr);` : 
         `grid-template-columns: repeat(3,1fr);`};
-    gap: 2rem;
+    gap: 3rem;
     margin: 3rem 0;
     /* height: 250px; */
+    background-color: white;
+    box-shadow: 5px 10px 1rem rgba(1,1,1, 0.5);
 
     .hide {
         display: none;
     }
+
 
     ${media.lessThan("medium")`
         grid-template-columns: 1fr;
@@ -563,7 +603,7 @@ export const AboutImage = styled.div`
     align-self: center;
     /* height: 100%; */
     margin: auto;
-
+    grid-column: 2/3;
     ${media.lessThan("medium")`
         grid-column: 1/-1;
     `}
@@ -572,15 +612,16 @@ export const AboutImage = styled.div`
 
 export const AboutText = styled.div`
     align-self: center;
-    background: var(--grey);
+    background: var(--white);
     padding: 1rem;
+    grid-column: 3/4;
 
     ${media.lessThan("medium")`
         grid-column: 1/-1;
     `}
 `
 export const AboutFull = styled.div`
-    grid-column: 1 / span 2;
+    grid-column: 2 / span 2;
     align-self: center;
     margin: 2rem;
 
@@ -603,6 +644,27 @@ export const AboutQuote = styled.div`
     p {
         font-weight: 600;
         margin: auto;
+    }
+`
+
+export const AboutHero = styled.section`
+    /* grid-row: 4/5; */
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    margin: 3rem 0 0 0;
+    position: relative;
+
+    .bgImage {
+        z-index: -100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 `
 
@@ -650,6 +712,8 @@ export const Icons = styled.div`
     grid-gap: 2rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     margin: 2rem 0;
+    justify-items: center;
+    align-items: start;
 
     ${media.lessThan("medium")`
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -720,18 +784,18 @@ export const MetodoMiddle = styled.div`
 `
 
 export const MetodoModulos = styled.div`
-    grid-row: 3/4;
+    grid-row: 4/5;
     grid-column: 2/-2;
     margin: 3rem 1rem;
 `
 
 export const MetodoBonus = styled.div`
-    grid-row: 4/5;
+    grid-row: 5/6;
     grid-column: 2/-2;
 `
 
 export const MetodoOutro = styled.div`
-    grid-row: 5/6;
+    grid-row: 6/7;
     grid-column: 2/-2;
 `
 
@@ -779,6 +843,7 @@ export const Bonus = styled.div`
     display: grid;
     padding: 1.5rem 0;
     grid: auto / repeat(5, 1fr);
+    gap: 0 2rem;
     grid-template-areas: 'title title title title .' 'img img desc desc desc' 'img img desc desc desc';
 
     ${media.lessThan("medium")`
@@ -882,7 +947,7 @@ export const ValorAVista = styled.p`
 export const Logo = styled.div`
     height: auto;
     width: 10rem;
-    margin: 0 1rem 2rem;
+    margin: 0 auto 2rem;
 
     /* ${media.lessThan("large")`
         width: 2.3rem;
@@ -928,7 +993,8 @@ export const Whatsapp = styled.a`
     .icon {
         display: inline-block;
         line-height: 1;
-        margin-top: 15px;
+        margin-top: 7px;
+        height: 45px;
         font-weight: 400;
     }
 

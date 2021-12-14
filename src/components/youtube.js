@@ -17,7 +17,7 @@ const Youtube = ({ embedId }) => (
             className="spotlightr" 
             allowtransparency="true" 
             allowfullscreen="true" 
-            src="https://videomng.builderall.com/embed/Gd1bhCxAv3/?autoplay=1&countdown=1&allowpause=1" 
+            src="https://videomng.builderall.com/embed/5PAv0rILo0/?autoplay=1&countdown=1&controls=0&allowpause=1" 
             frameborder="0" 
             scrolling="no"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 

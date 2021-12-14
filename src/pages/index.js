@@ -1,54 +1,70 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
+
 import { useInView } from 'react-intersection-observer';
-import GlobalStyles from '../styles/global';
 import { StaticImage } from 'gatsby-plugin-image';
+import GlobalStyles from '../styles/global';
+// import {FaWhatsapp} from 'react-icons/fa';
+import * as S from '../styles/sales_page';
+import * as C from '../styles/elements';
+import {Whatsapp} from '@styled-icons/fa-brands/Whatsapp';
+
 import About from '../components/About';
 import Cover from '../components/Cover';
 import AntesEDepois from '../components/AntesEDepois';
 import Testimonials from '../components/Testimonials';
 import Header from '../components/Header';
-import IPresentYou from '../components/IPresentYou';
+import MetodoEsbelta from '../components/MetodoEsbelta';
 import Beneficios from '../components/Beneficios';
-import OMetodo from '../components/OMetodo';
+import Desafio28Dias from '../components/Desafio28Dias';
 import Mission from '../components/Mission';
 import Warranty from '../components/Warranty';
 import Price from '../components/Price';
 import AvisoLegal from '../components/AvisoLegal';
-import {FaWhatsapp} from 'react-icons/fa';
-import * as S from '../styles/sales_page';
-import * as C from '../styles/elements';
+
+// const About = loadable(() => import('../components/About'));
+// const Cover = loadable(() => import('../components/Cover'));
+// const AntesEDepois = loadable(() => import('../components/AntesEDepois'));
+// const Testimonials = loadable(() => import('../components/Testimonials'));
+// const Header = loadable(() => import('../components/Header'));
+// const MetodoEsbelta = loadable(() => import('../components/MetodoEsbelta'));
+// const Beneficios = loadable(() => import('../components/Beneficios'));
+// const Desafio28Dias = loadable(() => import('../components/Desafio28Dias'));
+// const Mission = loadable(() => import('../components/Mission'));
+// const Warranty = loadable(() => import('../components/Warranty'));
+// const Price = loadable(() => import('../components/Price'));
+// const AvisoLegal = loadable(() => import('../components/AvisoLegal'));
 
 const SalesPage = () => {
-    const [ref, inView, entry] = useInView({rootMargin: '-100px 0px 0px 0px'});
-    const header = useRef(null);
-    const [headerSize, setHeaderSize] = useState("");
+    // const [ref, inView, entry] = useInView({rootMargin: '-100px 0px 0px 0px'});
+    // const header = useRef(null);
+    // const [headerSize, setHeaderSize] = useState("");
   
-    useEffect(() => {
-      const setMenuColor = () => {
-        if (!entry) return;
-        if (!entry.isIntersecting) {
-            header.current.classList.add("nav-scrolled");
-            setHeaderSize('small');
-        } else {
-          header.current.classList.remove("nav-scrolled");
-          setHeaderSize('');
-        }
-      }
-      setMenuColor()
-    },[entry])
+    // useEffect(() => {
+    //   const setMenuColor = () => {
+    //     if (!entry) return;
+    //     if (!entry.isIntersecting) {
+    //         header.current.classList.add("nav-scrolled");
+    //         // setHeaderSize('small');
+    //     } else {
+    //       header.current.classList.remove("nav-scrolled");
+    //     //   setHeaderSize('');
+    //     }
+    //   }
+    //   setMenuColor()
+    // },[entry])
 
     return (
         <S.Layout>
-            <Header ref={header} size={headerSize}/>
+            {/* <Header ref={header} size={headerSize}/> */}
                 {/* <div style={{visibility:'hidden', marginLeft: 'auto'}} /> */}
                 
             <S.PageWrapper>
                 <GlobalStyles />
-                <S.Cover ref={ref}>
-                    <Cover/>
+                <S.Cover>
+                    <Cover/> 
                 </S.Cover>
                 <S.SocialProof1>
-                    <C.Title><C.Color color="var(--purple)">Veja O Que Dizem Minhas Alunas</C.Color> <C.Divider /></C.Title>
+                    <C.Title style={{gridColumn: '1/-1'}}><C.Color color="var(--purple)">Veja O Que Dizem Minhas Alunas</C.Color> <C.Divider /></C.Title>
                     <Testimonials>
                         <StaticImage
                             src="../images/testimonials/testemunho11.jpg" 
@@ -66,24 +82,12 @@ const SalesPage = () => {
                             />
                     </Testimonials>
                 </S.SocialProof1>
-                <Beneficios />
-                <S.Hero>
-                    <div style={{maxWidth:"100ch"}}><C.Title><C.BG>Há Alguns Anos, Descobri os Segredos Do Emagrecimento Saudável e Prazeroso</C.BG></C.Title></div>
-                    <C.Paragraph><C.Bolder><C.Color>...que transformaram a forma como eu via a Nutrição.</C.Color></C.Bolder></C.Paragraph>
-                    {/* <C.Paragraph>
-                        <C.Color color="var(--postColor)"><C.BG>IMPORTANTE:</C.BG></C.Color> 
-                        <C.Color> Se alcançar um resultado impressionante desses, de forma tão rápida, assusta você, 
-                    pare de ler agora mesmo. <br/>O método que irei te apresentar não é para você.</C.Color>
-                </C.Paragraph>
-                <C.Paragraph><C.Color>Mas se é isso mesmo que você está procurando, e se está DETERMINADA a emagrecer de uma vez por todas, </C.Color></C.Paragraph> */}
-                <C.Paragraph><C.Color>Eu lhe apresento...</C.Color></C.Paragraph>
-                </S.Hero>
-                <IPresentYou />
                 <About />
+                <MetodoEsbelta />
                 <AntesEDepois />
-                <OMetodo />
+                <Desafio28Dias />
                 <S.SocialProof2>
-                    <C.Title><C.Color color="var(--purple)">Mais Alguns Depoimentos De Minhas Alunas</C.Color> <C.Divider /></C.Title>
+                    <C.Title style={{gridColumn: '1/-1'}}><C.Color color="var(--purple)">Mais Alguns Depoimentos De Minhas Alunas</C.Color> <C.Divider /></C.Title>
                     <Testimonials>
                         <StaticImage
                             src="../images/testimonials/testemunho25.jpg"
@@ -104,13 +108,15 @@ const SalesPage = () => {
                 <Mission />
                 <Price />
                 <Warranty />
+                <Beneficios />
                 {/* <Threeway /> */}
                 {/* <Faq /> */}
                 <AvisoLegal />
+
                 <S.Contact>
                     {/* <span>Alguma dúvida?</span>                     */}
-                    <S.Whatsapp href="https://api.whatsapp.com/send?phone=telefone&amp;text=Oi%2C%20Quero%20saber%20mais%20sobre%20o%Metodo%20Esbelta!" className="float" target="_blank">
-                        <FaWhatsapp className="icon" />
+                    <S.Whatsapp href="https://wa.me/5551992677033?text=Ol%c3%a1%2c+gostaria+de+informa%c3%a7%c3%b5es+sobre+o+Desafio+28+Dias+do+M%c3%a9todo+Esbelta%2c+por+favor." className="float" target="_blank">
+                        <Whatsapp className="icon" />
                     </S.Whatsapp>
                 </S.Contact>
             

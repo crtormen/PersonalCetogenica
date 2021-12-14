@@ -36,17 +36,17 @@ const Button = styled.a`
     }
 
     ${media.lessThan('medium')`
-        font-size: 12px;
+        font-size: ${props => props.size === 'header' ? '12px' : '1rem'};
         padding: 20px 1rem;
         margin: 1rem 0;
     `}
 
     ${media.lessThan("400px")`
-        padding: 10px;
+        padding: ${props => props.size === 'header' ? '12px' : '1.2rem'};
     `}
 `
 
-const CTAButtonWrapper = styled.div`
+const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,12 +65,12 @@ const CTAButtonWrapper = styled.div`
 
 
 const CTAButton = ({size, children}) => (
-    <CTAButtonWrapper>
+    <ButtonWrapper>
         {/* <img src={click} alt="clique aqui" /> */}
-        <Button size={size} title="Comprar" href="https://pay.hotmart.com/W18216290C">
+        <Button size={size} title="Comprar" href="https://go.metodoesbelta.com/pay/desafio-28-dias">
             {children}
         </Button>
-    </CTAButtonWrapper>
+    </ButtonWrapper>
 );
 
 export default CTAButton;

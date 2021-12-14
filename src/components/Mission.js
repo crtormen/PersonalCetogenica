@@ -38,12 +38,12 @@ const Mission = () => (
             <h3>Isso tudo é TOTALMENTE possível! E eu tenho uma META definida para esse ano...</h3>
 
 
-            <C.Title><C.BG>Eu Vou Ajudar 1000 Mulheres a Alcançarem Todas <br/>Essas Conquistas Até o Final de 2021.</C.BG></C.Title>
+            <C.Title><C.BG>Eu Vou Ajudar 10000 Mulheres a Alcançarem Todas <br/>Essas Conquistas Nos Próximos 5 Anos.</C.BG></C.Title>
 
-            <C.SubTitle>Que tal Ser Uma Delas?</C.SubTitle>
+            <C.SubTitle>VocÊ Quer Ser Uma Delas?</C.SubTitle>
         </div>
-        <CTAButton title="Comprar" href="https://pay.hotmart.com/W18216290C" >
-            Eu Também Quero Emagrecer!
+        <CTAButton title="Comprar" >
+            Sim, Eu Quero Emagrecer!
         </CTAButton>
     </S.Mission>
 );

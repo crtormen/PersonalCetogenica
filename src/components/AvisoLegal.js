@@ -1,6 +1,6 @@
 import React from 'react';
 import {AvisoLegalWraper} from '../styles/sales_page';
-
+import { Link } from 'gatsby';
 
 
 const AvisoLegal = () => (
@@ -17,9 +17,11 @@ const AvisoLegal = () => (
 
         <p>Todas e quaisquer declarações prospectivas contidas neste site ou em qualquer um de nossos produtos destinam-se a expressar a nossa opinião sobre os resultados potenciais que algumas pessoas podem alcançar.</p>
 
-        <p>Para sua segurança oferecemos uma garantia de 14 dias. Caso você não goste ou se adapte ao programa, basta solicitar ao nosso suporte o reembolso em até 14 dias contados à partir da data da compra que devolvemos 100% do valor pago.</p>
+        <p>Para sua segurança oferecemos uma garantia de 7 dias. Caso você não goste ou se adapte ao programa, basta solicitar ao nosso suporte o reembolso em até 7 dias contados à partir da data da compra que devolvemos 100% do valor pago.</p>
 
         <p>Todos os direitos desta página reservados a Charline Tormen Nutricionista.</p>
+        <p>Dúvidas ou sugestões, enviar email para: suporte@metodoesbelta.com</p>
+        <p><Link to="privacy-policy">Política de Privacidade</Link> - <Link to="terms-of-use">Termos de Uso</Link></p>
     </AvisoLegalWraper>
 );
 

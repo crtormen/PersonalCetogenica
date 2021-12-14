@@ -1,27 +1,20 @@
 
 export const Course = [
     {
-      question: 'Módulo #1 - Boas-Vindas e Como Melhor Aproveitar o Curso',
+      module: 'Módulo #1',
+      question: 'Boas-Vindas, Avaliação Física, Autoconhecimento e Planejamento dos Resultados',
       answer:
           "<p>Aqui você será introduzida à essa nova fase da sua vida. </p>" +
-          "<p>Te ensinarei a utilizar a plataforma e a baixar o aplicativo para ter acesso pelo celular, de onde estiver. </p>" +
-          "<p>Também explicarei nesse módulo de que forma você deverá utilizar o curso para otimizar os resultados. </p>" +
-          "<p>Você receberá o seu acesso à Comunidade Exclusiva dos alunos do curso, onde você terá uma rede de apoio.  </p>" +
-          "<p>Lá, poderá tirar suas dúvidas comigo, trocar ideias com as outras alunas, compartilhar suas conquistas, resultados, dificuldades. </p>"
+          "<p>Te ensinarei a utilizar a plataforma do programa e explicarei como utilizar o curso para otimizar os resultados. </p>" +
+          "<p>Você receberá o seu acesso ao Grupo Secreto das alunas do curso, onde você terá uma rede de apoio.  </p>" +
+          "<p>Lá, poderá tirar suas dúvidas comigo, trocar ideias com as outras alunas, compartilhar suas conquistas, resultados, dificuldades. </p>" +
+          "<p>Nesse módulo te conduzirei por um processo de autoconhecimento, para identificar quais são seus pontos fracos, que te fizeram engordar e te impedem de emagrecer," +
+          "E definiremos a sua meta de emagrecimento, para termos clareza de onde você está, e de onde irá chegar.</p>" +
+          "<p>E ainda aprenderá a fazer uma avaliação física em casa, para acompanhar o seu andamento.</p>"
     },
     {
-      question: 'Módulo #2 – Autoconhecimento e Planejamento Dos Seus Resultados',
-      answer: 
-      "<p>Esse módulo é importantíssimo.</p>" +
-      "<p>Antes de iniciar a dieta, vou te conduzir por um processo de autoconhecimento, onde você irá retroceder à sua história, avaliar todo o processo que te fez engordar.</p>" +
-      "<p>Também iremos analisar quais são suas motivações para emagrecer. <br />" +
-      "Cada pessoa tem os seus porquês, e para saber aonde você quer chegar, é preciso entender o porquê você quer isso.</p>" +
-      "<p>Feito isso, definiremos sua META e faremos uma placa com ela, como um memorial, para você se lembrar sempre e não perder o foco.</p>" +      
-      "<p>Definida a sua meta, iremos traçar nossa estratégia para as próximas semanas.</p>" +
-      "<p>Vou te ensinar a fazer uma avaliação física, e a medir seus resultados, parecido com o que eu faria em uma consulta presencial.</p>"
-    },
-    {
-      question: 'Módulo #3 – Planejando Sua Alimentação Para a 1ª Semana',
+      module: 'Módulo #2',
+      question: 'Planejando Sua Alimentação Para a 1ª Semana',
       answer: 
       "<p>Já com sua avaliação física e objetivo definidos, iremos calcular as suas necessidades nutricionais.</p>" +
       "<p>Não se preocupe, você não precisará fazer conta alguma.</p>" +
@@ -35,7 +28,8 @@ export const Course = [
 
     },
     {
-      question: 'Módulo #4 – 2ª Semana de Dieta e Introdução do Jejum Intermitente ',
+      module: 'Módulo #3',
+      question: '2ª Semana de Dieta e Introdução do Jejum Intermitente ',
       answer: 
       "<p>Explicarei o que é o jejum intermitente, como iniciar, e como incorporá-lo à sua dieta.</p>" +
       "<p>Nessa semana já teremos entrado em Cetose (você entenderá o que é isso lá nas aulas).</p>" +
@@ -43,7 +37,8 @@ export const Course = [
       "<p>Mais Livros de Receitas serão disponibilizados de acordo com essa nova etapa.</p>" 
     },
     {
-      question: 'Módulo #5 – 3ª Semana de Dieta e Aceleração dos Resultados',
+      module: 'Módulo #4',
+      question: '3ª Semana de Dieta e Aceleração dos Resultados',
       answer: 
       "<p>Nessa semana já teremos perdido algum peso e nosso corpo já estará com os hormônios regulados. </p>" +
       "<p>Aqui já começaremos a observar os benefícios da dieta cetogênica e do jejum.</p>" +
@@ -53,30 +48,30 @@ export const Course = [
 
     },
     {
-      question: 'Módulo #6 – 4ª Semana de Dieta – Tonificando Enquanto Emagrece',
+      module: 'Módulo #5',
+      question: '4ª Semana de Dieta – Tonificando Enquanto Emagrece',
       answer: 
       "<p>Aqui introduziremos o ciclo de carboidratos ao nosso arsenal.</p>" +
-      "<p>Novos livros de receitas serão disponibilizados de acordo com esta etapa.</p>" +
       "<p>Isso permitirá que você continue perdendo gordura enquanto mantém a musculatura tonificada, com estoque de glicogênio. </p>" +
       "<p>Importante para delinear o corpo e realçar o aspecto magra esbelta.</p>" 
 
     },
     {
-      question: 'Módulo #7 – 5ª Semana em Diante – Manutenção ou Ainda Precisará Emagrecer',
+      module: 'Módulo #6',
+      question: '5ª Semana em Diante – Manutenção ou Ainda Precisará Emagrecer',
       answer: 
       "<p>Aqui faremos uma avaliação desse 1º mês. </p>" +
-      "<p>Caso você já tenha alcançado a sua meta e não deseje emagrecer mais, ensinarei como manter os resultados, incorporando esse novo estilo de vida à sua rotina e de sua família.</p>" +
-      "<p>Colocarei você no piloto automático para manter-se magra para o resto da vida.</p>" +
-      "<p>Caso não tenha emagrecido tudo o que precisava para alcançar sua meta, orientarei como continuar acelerando o emagrecimento.</p>" +
-      "<p>Introduzirei novas receitas e orientarei como sair da dieta sem prejudicar os resultados e a saúde.</p>" +
+      "<p>Caso você já tenha alcançado a sua meta e não deseje emagrecer mais, mostrarei como manter os resultados, incorporando esse novo estilo de vida à sua rotina e de sua família.</p>" +
+      "<p>Caso não tenha emagrecido tudo o que precisava para alcançar sua meta, também explicarei como continuar acelerando o emagrecimento.</p>" +
+      "<p>Orientarei como sair da dieta sem prejudicar os resultados e a saúde.</p>" +
       "<p>Também falaremos sobre o efeito platô (estagnação dos resultados) e como lidar com ele. <br />E próximos passos caso seu objetivo seja buscar a hipertrofia muscular.</p>" 
     }];
 
     export const Bonus = [
         {
-            question: "Bônus #1 - 16 Livros de Receitas Calculadas",
+            question: "Bônus #1 - 4 Livros de Receitas Calculadas",
             answer: 
-            "<p>Você terá acesso a 16 livros de receitas deliciosas, desenvolvidos por mim, todas contendo o cálculo de calorias, proteínas, gorduras e carboidratos de cada receita.</p>" +
+            "<p>Você terá acesso a 4 livros de receitas deliciosas, desenvolvidos por mim, todas contendo o cálculo de calorias, proteínas, gorduras e carboidratos de cada receita, separados por refeição que você poderá substituir em sua rotina.</p>" +
             "<p>Você receberá livros de:</p>" +
             "<ul>Receitas de Sopas e Cremes</ul>" +
             "<ul>Receitas de Tortinhas e Bolos Cetogênicos</ul>" +
@@ -98,24 +93,16 @@ export const Course = [
 
         },
         {
-            question: "Bônus #2 - Programa de Treinamento Físico Detox40",
+            question: "Bônus #2 - Semana de Treinos do Método Detox40",
             answer:
             "<p>Você terá acesso a um plano de 1 semana do Programa de Treinamento Detox40, do treinador Rodrigo Piano.</p>" +
-            "<p>São treinos de 15 minutos, que você poderá fazer do conforto da sua casa para potencializar seus resultados.</p>" 
+            "<p>São treinos metabólicos de 15 minutos, e que você poderá fazer do conforto da sua casa para potencializar seus resultados.</p>" 
  
         },
         {
-            question: "Bônus #3 - Aulas de LPF (Low Pressure Fitness) com fisioterapeuta",
+            question: "Bônus #3 - Semana de treinos da Treinadora Manu Reis",
             answer: 
-            "<p>Nessas aulas você aprenderá a executar a técnica hipopressiva, também chamada de “exercício da barriga negativa”.</p>" +
-            "<p>Esse é um sistema de treino postural que traz inúmeros benefícios, como:</p>" +
-            "<ul>" +
-            "<li> Melhora da postura</li>"+
-            "<li> Redução da medida da cintura</li>"+
-            "<li> Fortalecimento da musculatura pélvica e abdominal</li>"+
-            "<li> Diminuição do desconforto lombar</li>"+
-            "<li> Reeducação da respiração</li>"+
-            "</ul>"
-
+            "<p>Nesse presente incrível, a treinadora Manu Reis passará treinos para membros inferiores e membros superiores.</p>" +
+            "<p>Para você fazer de casa, e ficar com o corpo ainda mais durinho e definido.</p>"
         }
     ];

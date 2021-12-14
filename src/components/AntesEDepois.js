@@ -6,7 +6,14 @@ import * as S from '../styles/sales_page';
 
 const AntesEDepois = () => (
     <S.AntesEDepois>
-        <C.Title className="title"><C.Color>Veja Alguns Antes e Depois</C.Color><C.Divider /></C.Title>
+        <StaticImage
+            loading="eager"
+            layout="fullWidth"
+            src="../images/background-gradient.jpg"
+            alt="capa"
+            className="bgImage"
+        />
+        <C.Title className="title"><C.Color>Veja Alguns Resultados Obtidos Com o Método Esbelta</C.Color><C.Divider /></C.Title>
         <S.Grid>
             <StaticImage
                 src='../images/evolucoes/evolucao17.jpg'

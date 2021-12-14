@@ -17,7 +17,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          // placeholder: `dominantColor`,
+          quality: 70,
+          // backgroundColor: `transparent`
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -30,10 +40,36 @@ module.exports = {
         icon: 'src/images/favicon.ico'
       },
     },    
-    "gatsby-plugin-anchor-links",
-    `gatsby-plugin-transition-link`,
+    // "gatsby-plugin-anchor-links",
+    // `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: 'GTM-NJGNK3K',
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      },
+    },
+    `gatsby-plugin-perf-budgets`,
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+        disable: true,
+      },
+    },
+    // { 
+    //   resolve: "gatsby-plugin-preconnect",
+    //   options: {
+    //     domains: [
+    //       "https://www.google-analytics.com",
+    //       "https://www.googletagmanager.com",
+    //       "https://www.facebook.com"
+    //     ],
+    //   },
+    // },
     // `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

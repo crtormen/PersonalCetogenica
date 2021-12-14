@@ -98,6 +98,7 @@ img {
 body {
   --purple: #5B2266;
   --orange: #FF613C;
+  --light-orange: #fcc2b4;
   --yellow: #FFF051;
   --pink: #C82B70;
   --grey: #F9F7FA;
@@ -114,7 +115,7 @@ body {
   --purpleRGB: 91, 34, 102;
   --orangeRGB: 255, 97, 60;
   --highlight: #FF613C;
-  --menuBackground: rgba(var(--purpleRGB),0.2);
+  --menuBackground: rgba(var(--purpleRGB),1);
   --menuText: var(--postColor);
 }
 

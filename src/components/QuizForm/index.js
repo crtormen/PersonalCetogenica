@@ -7,9 +7,9 @@ import ResultsPage from './ResultsPage';
 import * as S from './styled';
 
 const NAF = {
-    low: 1.4,
-    medium: 1.7,
-    high: 2
+    low: 0.8,
+    medium: 0.9,
+    high: 1
 }
 
 const QuizForm = () => {
@@ -37,6 +37,12 @@ const QuizForm = () => {
 
         calculatedResults.total = gmb * NAF[activity] * 0.8;
 
+        calculatedResults.total = calculatedResults.total >= 1300 && calculatedResults.total < 1499 ? 1400 : calculatedResults.total;
+        calculatedResults.total = calculatedResults.total >= 1500 && calculatedResults.total < 1699 ? 1600 : calculatedResults.total;
+        calculatedResults.total = calculatedResults.total < 1299 ? 1200 : calculatedResults.total;
+        calculatedResults.total = calculatedResults.total >= 1700 ? 1800 : calculatedResults.total;
+        
+
         setResult(calculatedResults);
     }
 
@@ -54,6 +60,7 @@ const QuizForm = () => {
     }
 
     const handleChangeGender = (gender) => {
+        console.log(gender)
         setGender(gender);
         setCurrentStep(currentStep+1);
     }
@@ -88,8 +95,8 @@ const QuizForm = () => {
                     result={result} 
                 />
             </S.Form>
-            <S.Navigation>
-                {/* <a class="gray-round">←</a> 
+            {/*<S.Navigation>
+                 <a class="gray-round">←</a> 
                 <ul>
                     <li class="selected first-nav-step">
                         <a href="#" class="nav"></a>
@@ -109,8 +116,8 @@ const QuizForm = () => {
                     <li class="selected">
                         <a href="#" class="nav"></a>
                     </li>
-                </ul> */}
-            </S.Navigation>
+                </ul>
+            </S.Navigation> */}
             {/* <S.PrevButton onClick={prev} disabled={prev === 1} /> */}
         </S.FormWrapper>
     )

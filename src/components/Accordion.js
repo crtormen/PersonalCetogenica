@@ -1,8 +1,11 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
-import { IconContext } from 'react-icons';
-import { FiPlus, FiMinus } from 'react-icons/fi';
+import media from 'styled-media-query';
+// import { IconContext } from 'react-icons';
+import { Plus } from '@styled-icons/bootstrap/Plus';
+import { Minus } from '@styled-icons/entypo/Minus';
 import arrow from '../images/icons/arrow.svg';
+import * as C from '../styles/elements';
 
 
 const Wrapper = styled.div`
@@ -14,23 +17,63 @@ const Wrapper = styled.div`
 const Button = styled.div`
   background: var(--purple);
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  align-items: start;
   width: 100%;
   cursor: pointer;
+
+  span.module {
+    grid-column: 1/2;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--orange);
+    padding: 2rem 1rem;
+    min-width: 12ch;
+  }
+
   h1 {
+    grid-column: 2/7;
     font-family: 'Roboto', sans-serif;
-    padding: 2rem;
+    padding: 2rem 1rem;
     font-size: 1.6rem;
   }
-  span {
+
+  span.icon {
+    grid-column: 7/8;
     margin-right: 1.5rem;
+    padding: 2rem 1rem;
+
+  }
+
+  .iconimage {
+    height: 40px;
   }
 
   &:hover, .active {
     background-color: #AE2B6F;
   }
+
+  ${media.lessThan("large")`
+    h1 span.module {
+      font-size: 1.2rem;
+    }
+
+    h1, span.module, span.icon {
+      font-size: 1rem;
+      padding: 1rem 0.5rem;
+    }
+
+    span.icon {
+      margin-right: 0;
+    }
+
+    .iconimage {
+      height: 25px;
+    }
+  `}
+  
+
 `;
 
 const Dropdown = styled.div`
@@ -70,6 +113,10 @@ const Text = styled.div`
         background-size:contain; 
         background-repeat:no-repeat; 
     }
+
+    ${media.lessThan("large")`
+        font-size: 1rem;
+    `}
 ` 
 
 const Accordion = ({data}) => {
@@ -99,21 +146,22 @@ const Accordion = ({data}) => {
   };
 
   return (
-    <IconContext.Provider value={{ color: 'var(--orange)', size: '25px' }}>
+      <>
           {data.map((item, index) => (
               <Wrapper key={index}>
                 <Button 
                     className={clicked === index ? 'active' : ''}
                     onClick={() => toggle(index)}>
+                    <span className="module">{item.module}</span>
                     <h1>{item.question}</h1>
-                    <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                    <span className="icon">{clicked === index ? <Minus className="iconimage"/> : <Plus className="iconimage"/>}</span>
                 </Button>
                 <Dropdown ref={el => content.current[index] = el} style={{ maxHeight: `${setHeight[index]}` }}>
                     <Text  dangerouslySetInnerHTML={{ __html: item.answer}} />
                 </Dropdown>
               </Wrapper>
             ))}
-    </IconContext.Provider>
+      </>
   );
 };
 

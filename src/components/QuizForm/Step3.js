@@ -1,21 +1,22 @@
 import React, {useState} from 'react';
 import * as S from './styled';
 import {SubTitle} from '../../styles/elements';
-import { FaBirthdayCake } from 'react-icons/fa';
-import { GiBodyHeight, GiWeight } from 'react-icons/gi';
-import { BiTargetLock } from 'react-icons/bi';
+import { BirthdayCake } from '@styled-icons/fa-solid/BirthdayCake';
+import { Height } from '@styled-icons/material/Height';
+import { Weight } from '@styled-icons/fa-solid/Weight';
+import { TargetArrow } from '@styled-icons/fluentui-system-regular/TargetArrow';
 
 const Step3 = ({visible, age, setAge, height, setHeight, weight, setWeight, target, setTarget}) => {
     
     return (
         visible && 
-        <>
+        <S.Wrapper>
             <S.Header>
                 <SubTitle style={{textTransform: 'uppercase'}}>Nível de Atividade Diária</SubTitle>
             </S.Header>
             <S.LastStepWrapper>
                 <S.FormInput>
-                    <FaBirthdayCake className="icon"/>
+                    <BirthdayCake className="icon"/>
                     <input
                         type="number"
                         min="14"
@@ -28,7 +29,7 @@ const Step3 = ({visible, age, setAge, height, setHeight, weight, setWeight, targ
                     />
                 </S.FormInput>
                 <S.FormInput>
-                    <GiBodyHeight className="icon"/>
+                    <Height className="icon"/>
                     <input
                         type="number"
                         name="height"
@@ -41,7 +42,7 @@ const Step3 = ({visible, age, setAge, height, setHeight, weight, setWeight, targ
                     />
                 </S.FormInput>
                 <S.FormInput>
-                    <GiWeight className="icon"/>
+                    <Weight className="icon"/>
                     <input
                         type="number"
                         name="weight"
@@ -54,7 +55,7 @@ const Step3 = ({visible, age, setAge, height, setHeight, weight, setWeight, targ
                     />
                 </S.FormInput>
                 <S.FormInput>
-                    <BiTargetLock className="icon"/>
+                    <TargetArrow className="icon"/>
                     <input
                         type="number"
                         name="target"
@@ -70,7 +71,7 @@ const Step3 = ({visible, age, setAge, height, setHeight, weight, setWeight, targ
                     <button className="primary" type="submit">Calcular</button> 
                 </S.FormInput>
             </S.LastStepWrapper>
-        </>
+        </S.Wrapper>
     )
 }
 

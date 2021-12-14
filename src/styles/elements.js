@@ -22,7 +22,7 @@ export const Paragraph = styled.p`
     line-height: 1.5;
     font-family: 'Open Sans';
     font-weight: 400;
-    max-width: 80ch;
+    max-width: 70ch;
     color: var(--texts);
 
     ${media.lessThan("medium")`

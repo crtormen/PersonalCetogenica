@@ -9,6 +9,9 @@ export const Layout = styled.main`
     position: absolute; */
     width: 100%;
     min-height: 100vh;
+    height: 100%;
+    background: #5b2266;
+    background: linear-gradient(0deg, rgba(91,34,102,1) 0%, rgba(102,34,96,1) 35%, rgba(200,43,112,1) 100%);
 
     .coverImage {
         position: absolute;

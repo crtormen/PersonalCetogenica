@@ -10,32 +10,36 @@ const Price = () => (
 	<S.Atencao>Atenção: <br /><span>Promoção Por Tempo Limitado</span></S.Atencao>
 	<C.Title>Estou oferecendo uma janela de oportunidade <br />única nesse lançamento<C.Divider /></C.Title>
 
-	<C.Paragraph><C.Bolder>O programa completo do Método Esbelta será vendido por <C.Color color="red">R$ 994</C.Color> dentro de algumas semanas.</C.Bolder></C.Paragraph>
+	<C.Paragraph><C.Bolder>O programa completo do Desafio 28 Dias do Método Esbelta será vendido por <C.Color color="red">R$ 497</C.Color> dentro de algumas semanas.</C.Bolder></C.Paragraph>
 	
 	<C.Paragraph>Esse é o único método de emagrecimento, capaz de transformar algo chato em algo extremamente prazeroso e sem sofrimento, de forma eficaz e saudável, com benefícios que você colherá para o resto da vida.</C.Paragraph>
 	
-	<C.Paragraph>Mas, como meu desejo é premiar aquelas mulheres que estão determinadas, com convicção de onde querem chegar e acreditam no meu trabalho, disponibilizarei o Método Esbelta com um valor muito menor do que R$ 994.</C.Paragraph>
+	<C.Paragraph>Mas, como meu desejo é premiar aquelas mulheres que estão determinadas, com convicção de onde querem chegar e acreditam no meu trabalho, disponibilizarei o Desafio 28 Dias do Método Esbelta com um valor muito menor do que R$ 497.</C.Paragraph>
 	
-	<C.Paragraph>E não estou nem falando de um investimento em torno de 50% desse valor, que seria R$ 497.</C.Paragraph>
+	<C.SubTitle><C.Color color="var(--orange)">Nesta oferta, você receberá 60% de desconto!</C.Color></C.SubTitle>
 
 	<S.CTAFinal inset>
 			<S.CTATitle>Comprando hoje você receberá: </S.CTATitle>
 			<S.CTAList icon="greencheck">
 				<ul>
-					<li>O Sistema Completo do Método Esbelta <C.ValorFake>(R$994)</C.ValorFake></li>
-					<li>16 Livros de Receitas Calculadas <C.ValorFake>(R$397)</C.ValorFake></li>
-					<li>5 Treinos do Programa Detox40 <C.ValorFake>(R$49)</C.ValorFake></li>
-					<li>8 Aulas de LPF - Low Press Fitness <C.ValorFake>(R$760)</C.ValorFake></li>
+					<li>O Programa Completo Desafio de 28 Dias do Método Esbelta <C.ValorFake>(R$1800)</C.ValorFake></li>
+					<li>Acesso ao Grupo Secreto de Alunas(NÃO ESTÁ À VENDA)</li>
+					<li>4 Livros de Receitas Calculadas <C.ValorFake>(R$116)</C.ValorFake></li>
+					<li>Semana de Treinos do Programa Detox40 <C.ValorFake>(R$49)</C.ValorFake></li>
+					<li>Semana de Treinos da Personal Manu Reis <C.ValorFake>(R$90)</C.ValorFake></li>
+					<li>Fórmulas de Manipulados(NÃO ESTÁ À VENDA)</li>
+					<li>Receitas de Chás Diuréticos(NÃO ESTÁ À VENDA)</li>
+					<li>Livros Digitais sobre as Técnicas Utilizadas(NÃO ESTÁ À VENDA)</li>
 				</ul>
 			</S.CTAList>
 			{/* <S.ValorCheio>Total De <C.ValorFake><C.Bolder>R$2200</C.Bolder></C.ValorFake></S.ValorCheio>
 			<S.Apenas>Por APENAS</S.Apenas>
 			<S.Parcelado>12x <span>R$ 30,41</span></S.Parcelado>
 			<S.ValorAVista>ou R$357 à vista</S.ValorAVista> */}
-			<S.CTAPrice><StaticImage src='../images/preco.png' alt="preco" /></S.CTAPrice>
-			<C.Paragraph><C.Bigger>É menos de R$1 por dia, para você alcançar a sua liberdade.</C.Bigger></C.Paragraph>
+			<S.CTAPrice><StaticImage src='../images/preco297.png' alt="preco" /></S.CTAPrice>
+			<C.Paragraph><C.Bigger>São 62 centavos por dia, para você alcançar a sua melhor versão.</C.Bigger></C.Paragraph>
 			
-			<CTAButton>Quero Ser Magra Com Menos de 1 Real Por Dia</CTAButton>
+			<CTAButton>Quero Ser Magra Com 62 centavos Por Dia</CTAButton>
 	</S.CTAFinal>
 	
 
