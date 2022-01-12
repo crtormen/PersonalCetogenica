@@ -1,14 +1,19 @@
 import React from 'react';
-import LazyImage from './LazyImage';
-import * as S from '../styles/sales_page';
 import * as C from '../styles/elements';
-import Testimonials from './Testimonials';
-import testemunho13 from '../images/testimonials/testemunho13.jpg';
-import testemunho12 from '../images/testimonials/testemunho12.jpg';
-import testemunho9 from '../images/testimonials/testemunho9.jpg';
+import styled from 'styled-components';
+
+
+const DesafioSection = styled.section`
+    grid-row: 8/9;
+    grid-column: 2/-2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+`
 
 const Desafio = () => (
-    <S.Desafio>
+    <DesafioSection>
         <C.Paragraph>
             Em 2019, condensei todo esse conhecimento em um Programa 100% Online, chamado Desafio Corpo Dos Sonhos.
         </C.Paragraph>
@@ -16,7 +21,7 @@ const Desafio = () => (
             E o resultado não poderia ter sido melhor. Centenas de alunos que aderiram ao desafio alcançaram resultados incríveis.
         </C.Paragraph>
 
-    </S.Desafio>
+    </DesafioSection>
 )
 
 export default Desafio;

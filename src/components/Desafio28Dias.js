@@ -1,15 +1,68 @@
 import React from 'react';
+import styled from 'styled-components';
+import media from 'styled-media-query';
+
 import { StaticImage } from 'gatsby-plugin-image';
 import CTAButton from './CTAButton';
 import * as S from '../styles/sales_page';
 import * as C from '../styles/elements';
 import Accordion from './Accordion';
 import { Course } from './AccordionData';
+import Bonus from './Bonus';
+
+const Desafio28DiasSection = styled.section`
+    grid-row: 6/7;
+    grid-column: 1/-1;
+    background: var(--grey);
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
+    padding: 2rem 0;
+
+    ${media.lessThan("medium")`
+        grid-template-columns: 1rem repeat(5, 1fr) 1rem;
+    `}
+`
+
+const MetodoIntro = styled.div`
+    grid-row: 1/2;
+    grid-column: 2/-2;
+    margin: 2rem auto;
+`
+
+const MetodoMiddle = styled.div`
+    grid-row: 2/3;
+    grid-column: 2/-2;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    background: rgba(55,55,55,0.8);
+    color: white;
+    box-shadow: 5px 10px 1rem rgba(1,1,1, 0.5);
+    /* text-align: center; */
+`
+
+const MetodoModulos = styled.div`
+    grid-row: 4/5;
+    grid-column: 2/-2;
+    margin: 3rem 1rem;
+`
+
+const MetodoBonus = styled.div`
+    grid-row: 5/6;
+    grid-column: 2/-2;
+`
+
+const MetodoOutro = styled.div`
+    grid-row: 6/7;
+    grid-column: 2/-2;
+`
 
 
 const Desafio28Dias = () => (
-    <S.Desafio28Dias>
-        <S.MetodoIntro>
+    <Desafio28DiasSection>
+        <MetodoIntro>
             <S.Logo style={{ width: '16rem', marginBottom: '3rem'}}>
                 <StaticImage src="../images/desafio28.png" alt="logo desafio" />
             </S.Logo>
@@ -120,8 +173,8 @@ const Desafio28Dias = () => (
                     <C.Bolder>Elaborado para que você consiga alcançar o seu corpo ideal de forma mais eficiente possível, 
                         de uma vez por todas, e sem passar fome</C.Bolder>
                 </C.Paragraph>
-        </S.MetodoIntro>
-        {/* <S.MetodoMiddle>
+        </MetodoIntro>
+        {/* <MetodoMiddle>
             <C.SubTitle  style={{color: 'white'}}>Minha ESTRATÉGIA para alcançar nossas metas <br />faz uso de 4 técnicas 
                 poderosíssimas e revolucionárias, <br/>comprovadas pela ciência nos últimos anos:</C.SubTitle>
 
@@ -163,124 +216,24 @@ const Desafio28Dias = () => (
                     </li>
                 </ul>
             </C.List>
-        </S.MetodoMiddle> */}
+        </MetodoMiddle> */}
         <C.Divider style={{gridRow: '3/4', gridColumn: '1/-1', width: '80%', borderColor: 'var(--purple)'}} />
-        <S.MetodoModulos>
+        <MetodoModulos>
             <C.Title>Como funcionará o Desafio 28 Dias do Método Esbelta? <C.Divider /></C.Title>
 
             <C.SubTitle>Meu Plano Testado e Validado, Para Fazer Você Perder <br/>De 5 a 10 Kg Em Apenas 28 Dias</C.SubTitle>
             <C.Paragraph style={{textAlign: 'center', margin: '0 auto'}}>O programa é composto por 6 módulos (Clique no módulo para ver os detalhes):</C.Paragraph>
             <br/>
             <Accordion data={Course} />
-        </S.MetodoModulos>
-        <S.MetodoBonus>
+        </MetodoModulos>
+        <MetodoBonus>
             <C.Title><C.BG>SOMENTE PARA VOCÊ QUE SE INSCREVER HOJE</C.BG></C.Title>
             <C.SubTitle>Ao se inscrever hoje no Desafio de 28 Dias do Método Esbelta, <br/><C.Underline>VOCÊ GANHARÁ PRESENTES EXCLUSIVOS:</C.Underline></C.SubTitle>
             <C.Block>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/grupo.jpg' alt="grupo secreto" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #1 - Acesso ao Grupo Secreto das Alunas</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Você terá acesso ao Grupo Secreto das Alunas do Desafio.</C.Paragraph>
-                        <C.Paragraph>Esse é um grupo de apoio, onde você poderá tirar suas dúvidas comigo, compartilhar suas fotos, suas vitórias e dificuldades com mulheres que estão no mesmo processo que você.</C.Paragraph>
-                        <C.Paragraph>Muito importante para buscar motivação, e também para motivar.</C.Paragraph>
-                        <C.Paragraph><C.Color color="red">VALOR DA COMUNIDADE: <C.Bolder style={{ textDecoration: 'line-through'}}>R$100</C.Bolder></C.Color></C.Paragraph>
-                        <C.Paragraph>NESTA OFERTA: <C.Bolder><C.Color color="var(--green)">GRÁTIS</C.Color></C.Bolder></C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
-                <C.Divider/>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/capaslivros3.png' alt="ebooks receitas" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #2 - 4 Livros De Receitas Deliciosas CALCULADAS</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Você terá acesso a 4 Livros de Receitas deliciosas, desenvolvidos por mim, com todas as receitas contendo o cálculo de calorias, proteínas, gorduras e carboidratos.</C.Paragraph>
-                        <C.Paragraph>As receitas também possuem sugestão de uso por refeição. Com os dados de calorias e macronutientes, você poderá facilmente incorporar essas receitas na sua dieta. </C.Paragraph>
-                        <C.Paragraph>O esforço envolvido na elaboração desses 4 livros foi imenso. Mas você receberá gratuitamente.</C.Paragraph>
-                        <C.Paragraph><C.Color color="red">VALOR NORMAL: <C.Bolder style={{ textDecoration: 'line-through'}}>R$119</C.Bolder> (Ou  <C.Bolder style={{ textDecoration: 'line-through'}}>R$29</C.Bolder> cada livro)</C.Color></C.Paragraph>
-                        <C.Paragraph>NESTA OFERTA: <C.Bolder><C.Color color="var(--green)">GRÁTIS</C.Color></C.Bolder></C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
-                <C.Divider/>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/digo.jpg' alt="detox40" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #3 - Semana de Treinos Metabólicos do Programa Detox40</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Você terá acesso a uma semana de treinos do Programa de Treinamento Detox40, do treinador Rodrigo Piano.</C.Paragraph>
-                        <C.Paragraph>São treinos de 15 minutos, que você poderá fazer do conforto da sua casa para potencializar seus resultados.</C.Paragraph>
-                        <C.Paragraph><C.Color color="red">VALOR NORMAL: <C.Bolder style={{ textDecoration: 'line-through'}}>R$119</C.Bolder> (Ou  <C.Bolder style={{ textDecoration: 'line-through'}}>R$29</C.Bolder> cada)</C.Color></C.Paragraph>
-                        <C.Paragraph>NESTA OFERTA: <C.Bolder><C.Color color="var(--green)">GRÁTIS</C.Color></C.Bolder></C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
-                <C.Divider/>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/manureis.jpg' alt="ebooks" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #4 - Semana de Treinos com a Personal Manu Reis</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Nesse presente incrível, a treinadora Manu Reis passará treinos para membros inferiores e membros superiores.
-                          Para você fazer de casa, e ficar com o corpo ainda mais durinho e definido.</C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
-                <C.Divider/>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/manipulados.jpg' alt="ebooks" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #5 - Fórmulas de Suplementos Manipulados</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Prescrevi uma série de fórmulas que você poderá encomendar de farmácias de manipulação para problemas que nós, mulheres, enfrentamos.</C.Paragraph>
-                        <C.Paragraph>Celulite, Queda de cabelo, unhas fracas, estrias, flacidez, menopausa, problemas hormonais, e muitos outros.</C.Paragraph>
-                        <C.Paragraph>Sáo fórmulas que venho desenvolvendo ou coletando ao longo dos últimos anos, e que prescrevo diariamente para minhas pacientes.</C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
-                <C.Divider/>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/chas-diureticos-0.jpg' alt="ebooks" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #6 - Receitas de Chás Diuréticos</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Também elaborei diversas receitas de chás diuréticos, para ajudar você a eliminar a retenção de líquidos que tanto nos incomoda.</C.Paragraph>
-                        <C.Paragraph>São combinações de ervas que você poderá encontrar facilmente e fazer na sua casa</C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
-                <C.Divider/>
-                <S.Bonus>
-                    <S.BonusImage>
-                        <StaticImage src='../images/ebook.webp' alt="ebooks" />
-                    </S.BonusImage>
-                    <S.BonusTitle>
-                        <C.SubTitle color="var(--purple)">Presente #7 - Livros Digitais sobre as Técnicas Utilizadas no Método Esbelta</C.SubTitle></S.BonusTitle>
-                    <S.BonusDescription>
-                        <C.Paragraph>Caso você queira se aprofundar nas técnicas que utilizo no método, como Dieta Cetogênica e Jejum intermitente, você poderá baixar os ebooks que escrevi, com explicações científicas mais detalhadas.</C.Paragraph>
-                    </S.BonusDescription>
-                </S.Bonus>
+                <Bonus />
             </C.Block>
-        </S.MetodoBonus>
-        {/* <S.MetodoOutro>
-            <C.SubTitle>O que o Método Esbelta <C.Underline>Não</C.Underline> É</C.SubTitle>
-            <C.List>
-                <ul>
-                    <li>Não é uma dieta da moda</li>
-                    <li>Nem é uma pílula mágica</li>
-                    <li>Muito menos uma promessa ilusória</li>
-                </ul>
-            </C.List>
-        </S.MetodoOutro> */}
-    </S.Desafio28Dias>
+        </MetodoBonus>
+    </Desafio28DiasSection>
 )
 
 export default Desafio28Dias;

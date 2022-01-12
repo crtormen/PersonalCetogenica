@@ -52,14 +52,14 @@ module.exports = {
         enableWebVitalsTracking: true,
       },
     },
-    `gatsby-plugin-perf-budgets`,
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-        disable: true,
-      },
-    },
+    // `gatsby-plugin-perf-budgets`,
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     devMode: true,
+    //     disable: true,
+    //   },
+    // },
     // { 
     //   resolve: "gatsby-plugin-preconnect",
     //   options: {

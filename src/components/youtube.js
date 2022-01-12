@@ -15,10 +15,10 @@ const Youtube = ({ embedId }) => (
         <iframe 
             allow="autoplay" 
             className="spotlightr" 
-            allowtransparency="true" 
-            allowfullscreen="true" 
+            allowtransparency="true"
+            allowFullScreen={true} 
             src="https://videomng.builderall.com/embed/5PAv0rILo0/?autoplay=1&countdown=1&controls=0&allowpause=1" 
-            frameborder="0" 
+            frameBorder="0" 
             scrolling="no"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
             name="videoPlayerframe"> 

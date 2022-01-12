@@ -119,10 +119,6 @@ body {
   --menuText: var(--postColor);
 }
 
-section {
-  margin-bottom: 4rem;
-}
-
 
 .nav-scrolled {
         --menuBackground: rgba(var(--purpleRGB),1);

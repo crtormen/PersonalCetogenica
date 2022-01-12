@@ -1,7 +1,21 @@
 import React from 'react';
-import {AvisoLegalWraper} from '../styles/sales_page';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
 
+const AvisoLegalWraper = styled.section`
+    grid-row: 13/14;
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 2rem;
+    background: var(--postColor);
+    color: var(--borders);
+    font-size: 12px;
+    margin-bottom: 0;
+
+    p {
+        margin: 1rem;
+    }
+`
 
 const AvisoLegal = () => (
     <AvisoLegalWraper>

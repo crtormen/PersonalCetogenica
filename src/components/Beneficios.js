@@ -1,11 +1,71 @@
 import React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
-import * as S from '../styles/sales_page';
+import styled from 'styled-components';
+import media from 'styled-media-query';
 import * as C from '../styles/elements';
 
+const BeneficiosWrapper = styled.section`
+    grid-row: 12/13;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) repeat(5, 1fr) minmax(1em, 1fr);
+    margin-bottom: 3rem;
+
+    ${media.lessThan("medium")`
+        grid-template-columns: 1fr;
+    `}
+`
+
+const BeneficiosLeftSide = styled.div`
+    grid-column: 1/5;
+    grid-row: 1/2;
+    padding: 2rem 2rem 2rem 6rem;
+
+    ${media.lessThan("medium")`
+        grid-column: 1/-1;
+        padding: 2rem;
+    `}
+`;
+
+const BeneficiosRightSide = styled.div`
+    grid-row: 1/2;
+    grid-column:5/8;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--orange);
+    padding: 2rem;
+
+    ${media.lessThan("medium")`
+        grid-column: 1/-1;
+        grid-row: 2/3; 
+        align-items: center;       
+        `}
+        `;
+
+
+const BeneficiosFullPage = styled.div`
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background: rgb(91,34,102);
+    background: linear-gradient(183deg, rgba(91,34,102,1) 0%, rgba(102,34,96,1) 35%, rgba(200,43,112,1) 100%);
+    color: white;
+    padding: 2rem;
+
+    ${media.lessThan("medium")`
+        grid-row: 3/4;        
+    `}
+`
+
 const Beneficios = () => (
-    <S.Beneficios>
-        <S.BeneficiosLeftSide>
+    <BeneficiosWrapper>
+        <BeneficiosLeftSide>
             <C.SubTitle>Eu acredito que se você chegou até aqui, não foi por acaso.</C.SubTitle> 
             <C.Paragraph>
                 Você quer ou precisa emagrecer! E eu te garanto que se você seguir minha estratégia e aplicar passo a passo todas as minhas recomendações, você será capaz de:
@@ -54,14 +114,14 @@ const Beneficios = () => (
         <br /><br /><br/>
         <C.Paragraph>E, até mesmo, caso você se sabote, secretamente,  por acreditar (lá no fundo) que você não é capaz de conquistar os seus sonhos.
         </C.Paragraph>
-        </S.BeneficiosLeftSide>
-        <S.BeneficiosRightSide>
+        </BeneficiosLeftSide>
+        <BeneficiosRightSide>
                 <StaticImage style={{ width: '85%'}} src='../images/evolucoes/evolucao-etiene.jpg' alt="AntesDepois" />
                 <StaticImage style={{ width: '85%'}} src='../images/evolucoes/evolucao3.jpg' alt="AntesDepois" />
                 <StaticImage style={{ width: '85%'}} src='../images/evolucoes/evolucao-mariadorneles.jpg' alt="AntesDepois" />
                 <StaticImage style={{ width: '85%'}} src='../images/evolucoes/evolucao9.jpg' alt="AntesDepois" />
-        </S.BeneficiosRightSide>
-    </S.Beneficios>
+        </BeneficiosRightSide>
+    </BeneficiosWrapper>
 )
 
 export default Beneficios;

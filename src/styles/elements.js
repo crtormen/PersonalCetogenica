@@ -104,11 +104,6 @@ export const Bigger = styled.span`
     font-weight: bolder;
 `
 
-export const ValorFake = styled.span`
-    text-decoration: line-through;
-    color: red;
-`
-
 export const List = styled.div`
     ul {
         margin: 2rem;

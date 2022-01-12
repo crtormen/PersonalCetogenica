@@ -1,18 +1,35 @@
 import React from 'react'
+import styled from 'styled-components';
+import media from 'styled-media-query';
 import { StaticImage } from 'gatsby-plugin-image';
 import CTAButton from './CTAButton';
 import * as C from '../styles/elements';
 import * as S from '../styles/sales_page';
 
-const AntesEDepois = () => (
-    <S.AntesEDepois>
-        <StaticImage
-            loading="eager"
-            layout="fullWidth"
-            src="../images/background-gradient.jpg"
-            alt="capa"
-            className="bgImage"
-        />
+
+const AntesEDepoisSection = styled.section`
+    position: relative;
+    grid-row: 5/6;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    height: 100%;
+    width: 100%;
+
+
+    background: rgb(91,34,102);
+    background: linear-gradient(180deg, rgba(200,43,112,1) 0%, rgba(102,34,96,1) 35%, rgba(91,34,102,1) 100%);
+
+
+    ${media.lessThan("medium")`
+        padding: 2rem;
+    `}
+`
+
+const AntesEDepois = ({ title, }) => (
+    <AntesEDepoisSection>
         <C.Title className="title"><C.Color>Veja Alguns Resultados Obtidos Com o Método Esbelta</C.Color><C.Divider /></C.Title>
         <S.Grid>
             <StaticImage
@@ -66,7 +83,7 @@ const AntesEDepois = () => (
             href="https://pay.hotmart.com/W18216290C">
                 Quero Emagrecer Agora 
         </CTAButton>
-    </S.AntesEDepois>
+    </AntesEDepoisSection>
 )
 
 export default AntesEDepois;

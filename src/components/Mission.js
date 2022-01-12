@@ -1,11 +1,44 @@
 import React from 'react'
+import styled from 'styled-components';
+import media from 'styled-media-query';
 import * as S from '../styles/sales_page';
 import * as C from '../styles/elements';
 import { StaticImage } from 'gatsby-plugin-image';
 import CTAButton from './CTAButton';
 
+const MissionWrapper = styled.section`
+    grid-row: 9/10;
+    grid-column: 1/-1;
+    padding: 2rem 4rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    .text {
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin: 2rem;
+    }
+
+    
+
+    h3 {
+        font-size: 1.8rem;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        margin: 3rem 0 2rem;
+    }
+
+    ${media.lessThan("medium")` 
+        padding: 2rem 1rem;
+    `}
+
+`
+
 const Mission = () => (
-    <S.Mission>
+    <MissionWrapper>
             <C.Title><C.Color color="var(--purple)">Agora Imagine Se Você...</C.Color></C.Title>
         <S.TextAndImage>
             <C.List className="left">
@@ -45,7 +78,7 @@ const Mission = () => (
         <CTAButton title="Comprar" >
             Sim, Eu Quero Emagrecer!
         </CTAButton>
-    </S.Mission>
+    </MissionWrapper>
 );
 
 export default Mission;

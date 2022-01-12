@@ -1,10 +1,40 @@
 import React from 'react';
-import * as S from '../styles/sales_page';
+import styled from 'styled-components';
+import media from 'styled-media-query';
 import * as C from '../styles/elements';
 import { StaticImage } from 'gatsby-plugin-image';
 
+const WarrantyWrapper = styled.section`
+    grid-row: 11/12;
+    grid-column: 2/-2;
+    margin: 3rem auto;
+
+    .block {
+        display: flex;.
+        flex-direction: row;
+
+    }
+    .image {
+        width: 40%;
+        margin: auto;
+    }    
+    .description {
+        width: 60%;
+    }
+
+    ${media.lessThan("medium")` 
+        .block {
+            flex-direction: column;
+        }
+
+        .image, .description {
+            width: 100%;
+        }
+    `}
+`
+
 const Warranty = () => (
-    <S.Warranty>
+    <WarrantyWrapper>
             <C.Title><C.Color color="var(--orange)">Garantia de Tranquilidade:</C.Color><br/> Sua Satisfação ou Seu Dinheiro 100% de Volta<C.Divider /></C.Title>
             <div className="block">
                 <div className="image">
@@ -26,7 +56,7 @@ const Warranty = () => (
                     <C.Paragraph>O risco é todo meu. Você não corre risco algum.</C.Paragraph>
                 </div>
             </div>
-    </S.Warranty>
+    </WarrantyWrapper>
 );
 
 export default Warranty;
