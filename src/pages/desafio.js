@@ -87,7 +87,7 @@ const SalesPage = () => {
                 <AntesEDepois />
                 <Desafio28Dias />
                 <S.SocialProof2>
-                    <C.Title style={{gridColumn: '1/-1'}}><C.Color color="var(--purple)">Mais Alguns Depoimentos De Minhas Alunas</C.Color> <C.Divider /></C.Title>
+                    <C.Title style={{gridColumn: '1/-1'}}><C.Color>Mais Alguns Depoimentos De Minhas Alunas</C.Color> <C.Divider /></C.Title>
                     <Testimonials>
                         <StaticImage
                             src="../images/testimonials/testemunho25.jpg"
