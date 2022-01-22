@@ -239,6 +239,8 @@ export const Contact = styled.div`
         margin-right: 10px;
         border: solid 1px black;
     }
+
+
 `
 
 export const Whatsapp = styled.a`
